@@ -1,0 +1,108 @@
+.workshop-container{
+  display: flex;
+  font-family: 'NB';
+  height: 100vh;
+}
+
+// PARTE ESCURA - DETALHES
+
+.workshop-left{
+  flex-basis: 65%;
+  background-color: black;
+  color: #EEECDD;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  img{
+    max-width: 100%;
+    width: 80%;
+  }
+}
+.masterclass-head{
+  max-width: 50%;
+}
+
+.masterclass-headline{
+  font-family: 'CheltenhamBT';
+  // font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: $green;
+}
+
+.masterclass-title{
+  font-family: 'NB';
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  // max-width: 40%;
+  line-height: .9;
+  margin: 1.5rem 0 1rem 0;
+}
+.masterclass-subtitle{
+  // max-width: 35%;
+  font-family: 'NB';
+  font-size: 1.8rem;
+  line-height: 1.1;
+  margin: 0;
+}
+.masterclass-paragraphe{
+  max-width: 50%;
+  font-family: 'NB';
+  font-size: 1rem;
+  color: $green;
+  line-height: 1.1;
+  margin-top: 1rem;
+}
+
+
+
+// PARTE CLARA - INSCRIÇAO
+
+.workshop-right{
+  flex-basis: 35%;
+  background-color: $creme;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.workshop-right .workshop-signup{
+  display: flex;
+  flex-direction: column;
+}
+.workshop-right .workshop-signup-head{
+  text-align: center;
+  font-family: 'NB';
+  font-size: 1.5rem;
+}
+
+.workshop-right input{
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: transparent;
+  padding: .7rem 1.5rem;
+  font-size: .75rem;
+  font-family: 'NB';
+  margin-bottom: .5rem;
+}
+
+.workshop-right button{
+  padding: .7rem 1.5rem;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  font-family: 'NB';
+  font-size: .75rem;
+  border-radius: 20px;
+}
+
+.workshop-right img{
+  max-width: 100%;
+  margin-bottom: -2rem;
+  // width: 80%;
+}
