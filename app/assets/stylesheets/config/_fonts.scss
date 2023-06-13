@@ -1,6 +1,32 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 
+// Font styles
+@font-face {
+  font-family: "NB";
+  src: font-url('NB_International_Regular_Webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NB";
+  src: font-url('NB_International_Bold_Webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cheltanham";
+  src: font-url('CheltenhamBT-BoldCondensed') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Wingdings";
+  src: font-url('Wingdings3.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
 $headers-font: "Nunito", "Helvetica", "sans-serif";

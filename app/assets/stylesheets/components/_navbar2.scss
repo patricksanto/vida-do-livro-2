@@ -1,0 +1,41 @@
+
+.main-navbar{
+  background-color: rgba(0,0,0,0)!important;
+
+  ul{
+    list-style: none;
+  }
+}
+
+.vdl-logo{
+  max-width: 100px;
+}
+
+.navbar-items{
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.navbar-item{
+  font-size: .75rem;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  padding: 5px 20px 5px 5px;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+
+  &:hover{
+    background-color: white;
+    color: black;
+  }
+}
+
+.navbar-dot{
+  color: white;
+  font-family: 'Wingdings';
+
+  &:hover{
+    color: black;
+  }
+}

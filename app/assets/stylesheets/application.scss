@@ -10,3 +10,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+video {
+  width: calc(100vw - 6rem);
+  height: auto;
+  border: 1px solid $creme;
+  border-radius: 20px;
+  margin: 3rem;
+}

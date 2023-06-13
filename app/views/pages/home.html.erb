@@ -1,2 +1,49 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+
+<section class="hero px-4" id="apresentaçao">
+  <h1 class="hero-title">
+  O Futuro do Livro: a revolução digital no mundo das publicações
+  </h1>
+  <div class="hero-description">
+    <p>Todos nós, que dedicamos a vida ao fazer e ao pensar o mundo dos livros, nos questionamos para onde caminha o futuro da mídia. Para falar sobre isso, convidei um dos maiores especialistas do mundo, John B. Thompson, professor de Cambridge e ministrante desta masterclass. </p>
+    <p>Entre os temas abordados estão o crescimento constante da Amazon, storytelling de marcas, novas formas de monetização e o próprio conceito do que é um livro.</p>
+    <p>Gostei muito do resultado, e como esse é um assunto que acredito ser urgente para nós e para o bem do nosso mercado, resolvi disponibilizar o conteúdo gratuitamente. Espero que gostem.</br> </br>Daniel Lameira</p>
+  </div>
+  <%= image_tag 'arrow.png', class:'hero-arrow'%>
+</section>
+
+<section class="video" id="video">
+
+  <div class="video-container">
+    <%= video_tag("https://vimeo.com/835584509/52106e23f8?", controls: true) %>
+  </div>
+
+  <div class="video-description">
+    <p class="masterclass-john">JOHN B. THOMPSON</p>
+    <p>John B. Thompson é professor emérito de sociologia
+      da Universidade de Cambridge e Emeritus Fellow do Jesus College.
+    </p>
+    <p>
+    Um dos mais relevantes estudiosos da mídia na formação das sociedades modernas,
+    é autor dos livros Mercadores de cultura: o mercado editorial no século XXI (2013)
+    e As guerras do livro: a revolução digital no mundo editorial (2021),
+    publicados no Brasil pela editora Unesp.
+    </p>
+  </div>
+
+</section>
+
+<section id="sobre" class="sobre">
+  <p>
+    Vida do Livro é um curso e uma plataforma de conhecimento sobre histórias e mercado editorial.
+     Criada em 2015, recebe em suas edições diferentes vozes que desmistificam o universo dos livros
+     e debatem horizontes para o seu futuro.
+  </p>
+
+  <div class="sobre-logos">
+    <p>© Vida do Livro</p>
+    <%= image_tag 'seiva-white.png'%>
+    <%= image_tag 'logo-sonhorama-white.png' %>
+  </div>
+
+</section>
