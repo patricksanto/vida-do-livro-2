@@ -14,12 +14,15 @@
 
 .vdl-logo{
   max-width: 100px;
+  max-height: 40px;
 }
 
 .navbar-items{
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: .3rem;
+  margin-bottom: 0;
 }
 .navbar-item{
   display: flex;
