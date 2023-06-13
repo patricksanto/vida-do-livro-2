@@ -106,3 +106,56 @@
   margin-bottom: -2rem;
   // width: 80%;
 }
+
+
+@media (max-width: 768px){
+  .workshop-container{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  // LEFT SIDE
+  .workshop-left{
+    flex-basis: 100%;
+    align-items: center;
+
+    img{
+      width: 70%;
+    }
+  }
+  .masterclass-headline{
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+  }
+  .masterclass-head{
+    max-width: 80%;
+  }
+  .masterclass-title{
+    font-size: 4rem;
+    margin-bottom: .4rem;
+  }
+  .masterclass-subtitle{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    // max-width: 80%;
+  }
+  .masterclass-paragraphe{
+    max-width: 100%;
+  }
+
+  // RIGHT SIDE
+  .workshop-right{
+    flex-basis: 100%;
+  }
+  .workshop-right .workshop-signup-head{
+    max-width: 60%;
+    text-align: left;
+  }
+  .workshop-right img{
+    margin-bottom: -2rem;
+    max-width: 80%;
+    align-self: center;
+    margin-top: 1rem;
+  }
+
+}
