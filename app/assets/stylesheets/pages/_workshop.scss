@@ -18,11 +18,11 @@
 
   img{
     max-width: 100%;
-    width: 80%;
+    width: 50%;
   }
 }
 .masterclass-head{
-  max-width: 50%;
+  max-width: 80%;
 }
 
 .masterclass-headline{
@@ -35,11 +35,12 @@
 
 .masterclass-title{
   font-family: 'NB';
-  font-size: 5rem;
+  font-size: 6rem;
   margin-bottom: 1rem;
   // max-width: 40%;
   line-height: .9;
   margin: 1.5rem 0 1rem 0;
+  max-width: 7ch;
 }
 .masterclass-subtitle{
   // max-width: 35%;
@@ -47,9 +48,10 @@
   font-size: 1.8rem;
   line-height: 1.1;
   margin: 0;
+  max-width: 19ch;
 }
 .masterclass-paragraphe{
-  max-width: 50%;
+  max-width: 35ch;
   font-family: 'NB';
   font-size: 1rem;
   color: $green;
@@ -79,6 +81,8 @@
   text-align: center;
   font-family: 'NB';
   font-size: 1.5rem;
+  max-width: 15ch;
+  align-self: center;
 }
 
 .workshop-right input{
@@ -89,6 +93,7 @@
   font-size: .75rem;
   font-family: 'NB';
   margin-bottom: .5rem;
+  flex-grow: 1;
 }
 
 .workshop-right button{
@@ -156,6 +161,26 @@
     max-width: 80%;
     align-self: center;
     margin-top: 1rem;
+  }
+
+}
+
+@media (min-width: 1400px){
+  .workshop-left .masterclass-paragraphe{
+    font-size: 1.3rem;
+  }
+
+  .workshop-right .workshop-signup-head{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .workshop-right input{
+    font-size: 1rem;
+    padding: .9rem 1.5rem;
+  }
+  .workshop-right button{
+    font-size: 1.2rem;
+    padding: .9rem 1.5rem;
   }
 
 }
