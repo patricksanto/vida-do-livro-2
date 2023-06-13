@@ -1,6 +1,11 @@
 
 .main-navbar{
-  background-color: rgba(0,0,0,0)!important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 2.5rem;
+  z-index: 2;
 
   ul{
     list-style: none;
@@ -14,28 +19,36 @@
 .navbar-items{
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  gap: .3rem;
 }
 .navbar-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'NB';
   font-size: .75rem;
   border: 1px solid white;
-  text-decoration: none;
-  color: white;
-  padding: 5px 20px 5px 5px;
   transition: all 0.3s ease-in-out;
   text-transform: uppercase;
-
-  &:hover{
-    background-color: white;
-    color: black;
-  }
+  gap: 1rem;
+  cursor: pointer;
 }
 
+.navbar-item a{
+  color: $creme;
+  text-decoration: none;
+  padding: .2rem .5rem;
+}
 .navbar-dot{
   color: white;
   font-family: 'Wingdings';
+  padding-right: .5rem;
+}
 
-  &:hover{
-    color: black;
-  }
+.navbar-item:hover {
+  background-color: $creme;
+}
+.navbar-item:hover a,
+.navbar-item:hover .navbar-dot {
+  color: black;
 }

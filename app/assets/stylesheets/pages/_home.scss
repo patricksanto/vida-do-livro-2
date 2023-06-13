@@ -1,8 +1,8 @@
 // Specific CSS for your home-page
 .hero {
-  color: black;
-  background-color: #C0D7C8;
-  height: calc(100vh - 5rem);
+  color: $creme;
+  background-color: black;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -14,7 +14,7 @@
   text-transform: uppercase;
   text-align: center;
   font-size: 3.2rem;
-  padding-top: 15rem;
+  padding-top: 22rem;
   line-height: 1.1;
 }
 
