@@ -1,3 +1,9 @@
+*{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 // Specific CSS for your home-page
 .hero {
   color: $creme;
@@ -16,6 +22,9 @@
   font-size: 3.2rem;
   padding-top: 22rem;
   line-height: 1.1;
+}
+.hero-title-mobile{
+  display: none;
 }
 
 .hero-description{
@@ -93,6 +102,11 @@
   width: 4rem;
 }
 
+.video-description .video-description-last-paragraph{
+  display: none;
+}
+
+
 .sobre{
   background-color: #2A3030;
   color: $creme;
@@ -126,4 +140,140 @@
 .sobre img{
   max-width: 100%;
   width: 100px;
+}
+
+
+// MEDIA QUERIES
+
+// FOR
+// SMARTPHONES
+
+@media (max-width: 425px) {
+
+  // HERO
+  .hero{
+    padding-top: 5rem;
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    align-items: start;
+  }
+  .hero .hero-title{
+    display: none;
+  }
+  .hero-title-mobile{
+    display: inline-block;
+  }
+
+  .hero-title-mobile-first-line{
+    max-width: 8ch;
+    margin: 1rem 0;
+
+  }
+  .hero-title-mobile-first-line,
+  .hero-title-mobile-second-line{
+    display: inline-block;
+    font-family: 'NB';
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 1.25rem;
+    line-height: 1.1;
+    color: $creme;
+  }
+
+  .hero-description{
+    flex-direction: column;
+    gap: 0;
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+
+  .hero-arrow{
+    display: none;
+  }
+  // VIDEO
+
+  .video-container{
+    padding: 0;
+  }
+
+  .video-description{
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    text-align: left;
+    grid-gap: 1rem;
+    padding: 0 1rem 1rem 1rem;
+  }
+  .video-description p:first-child::after{
+    display: none;
+  }
+
+  .video-description .masterclass-john{
+    font-size: 2rem !important;
+  }
+
+  .video-description p:nth-child(2),
+  .video-description p:nth-child(3) {
+    display: none;
+  }
+  .video-description .video-description-last-paragraph{
+    display: block;
+  }
+
+
+
+  //
+  // SOBRE
+  //
+  .sobre{
+    grid-template-columns: 1fr;
+    text-align: center;
+    grid-gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+  .sobre-paragraph{
+    max-width: 33ch;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .sobre-paragraph::after{
+    content: '';
+    position: absolute;
+    width: 130%;
+    height: 1px;
+    background-color: $creme;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .sobre-logos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+  }
+  .sobre-logos p{
+    grid-column: 1 / span 2;
+  }
+  .sobre-logos img{
+    scale: .9;
+  }
+  .seiva-logo{
+    justify-self: end;
+  }
+}
+
+// FOR
+// TABLETS
+
+@media (max-width: 768px) {
+
+}
+
+// FOR
+// DESKTOPS
+
+@media (min-width: 1400px) {
+
 }

@@ -55,3 +55,9 @@
 .navbar-item:hover .navbar-dot {
   color: black;
 }
+
+@media (max-width: 768px){
+  .main-navbar .navbar-items{
+    display: none;
+  }
+}
