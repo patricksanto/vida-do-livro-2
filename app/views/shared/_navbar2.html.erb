@@ -1,4 +1,7 @@
-<div class="main-navbar d-flex justify-content-between align-content-center mx-auto py-4">
+<div class="main-navbar d-flex justify-content-between align-content-center mx-auto py-4"
+    data-controller="navbar"
+    data-action="scroll@window->navbar#updateNavbar">
+
   <%= image_tag "logo-vdl-white.png", class:'vdl-logo' %>
 
   <ul class="navbar-items">
