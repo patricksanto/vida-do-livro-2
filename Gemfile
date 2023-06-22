@@ -80,3 +80,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'rdstation-ruby-client'
+
+gem 'httparty'

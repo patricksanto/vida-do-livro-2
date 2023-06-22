@@ -1,0 +1,13 @@
+<%# <%= form_with model: :contact, url: pages_submit_path, method: :post do |form| %>
+  <%# <%= form.text_field :name, placeholder: 'Name' %>
+  <%# <%= form.email_field :email, placeholder: 'Email' %>
+  <%# <%= form.submit 'Submit' %>
+<%# <% end %>
+
+<%= form_with(model: @lead, url: leads_path, local: true) do |form| %>
+
+  <%= form.text_field :name, placeholder: 'Nome' %>
+  <%= form.text_field :email, placeholder: 'Email' %>
+  <%= form.submit 'ASSISTIR AGORA' %>
+
+<% end %>
