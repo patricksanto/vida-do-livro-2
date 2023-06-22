@@ -11,13 +11,22 @@
   </head>
 
   <body>
-  <% unless @hide_navbar %>
+  <% unless action_name == 'new' || action_name == 'create' %>
     <%= render "shared/navbar2" %>
   <% end %>
 
   <%= render "shared/flashes" %>
 
   <%= yield %>
+
+  <script>
+    setTimeout(function() {
+      var notice = document.querySelector('.alert-info');
+      if (notice) {
+        notice.style.display = 'none';
+      }
+    }, 5000); // hide the notice after 5 seconds (5000 milliseconds)
+  </script>
 
   </body>
 </html>
