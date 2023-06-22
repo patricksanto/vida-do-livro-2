@@ -14,6 +14,8 @@ class LeadsController < ApplicationController
     @lead = Lead.new(lead_params)
     @lead.tags = ['Videoaula_JohnBThompson_Jun23']
 
+    redirect_to root_path if consult_lead
+
     url = URI('https://api.rd.services/platform/contacts')
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = true
@@ -30,7 +32,7 @@ class LeadsController < ApplicationController
       result = JSON.parse(response.body)
       puts result
       flash[:notice] = 'Aproveite a masterclass!'
-      redirect_to root_path
+      redirect_to root_path(anchor: 'workshopform')
     else
       if @lead.save
         # redirect_to root_path, notice: 'Aproveite o workshop!'
@@ -59,19 +61,24 @@ class LeadsController < ApplicationController
     return @access_token
   end
 
-  def add_tag
-    url = URI('https://api.rd.services/platform/contacts')
+  def consult_lead
+    email = lead_params[:email]
+    encoded_email = URI.encode_www_form_component(email)
+    url = URI("https://api.rd.services/platform/contacts/email:#{encoded_email}")
+
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = true
 
-    request = Net::HTTP::Post.new(url)
-    request['Accept'] = 'application/json'
-    request['Content-Type'] = 'application/json'
-    request['Authorization'] = "Bearer #{@access_token}}"
-    request.body = "{\"tags\":[\"Videoaula_JohnBThompson_Jun23\"]}"
+    request = Net::HTTP::Get.new(url)
+    request["accept"] = 'application/json'
+    request["authorization"] = "Bearer #{refresh_token}"
 
     response = http.request(request)
-    puts response.read_body
+
+    # RETURN TRUE IF LEAD EXISTS
+    response.is_a?(Net::HTTPNotFound) ? false : true
+
+
   end
 
   def lead_params
