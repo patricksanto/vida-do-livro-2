@@ -29,7 +29,8 @@ class LeadsController < ApplicationController
     if response.is_a?(Net::HTTPSuccess)
       result = JSON.parse(response.body)
       puts result
-      redirect_to root_path, notice: 'Aproveite o workshop!'
+      flash[:notice] = 'Aproveite a masterclass!'
+      redirect_to root_path
     else
       if @lead.save
         # redirect_to root_path, notice: 'Aproveite o workshop!'
