@@ -89,7 +89,10 @@
   max-width: 15ch;
   align-self: center;
 }
-
+.workshop-right form{
+  display: flex;
+  flex-direction: column;
+}
 .workshop-right input{
   border-radius: 20px;
   border: 1px solid black;
@@ -101,13 +104,14 @@
   flex-grow: 1;
 }
 
-.workshop-right button{
-  padding: .7rem 1.5rem;
+.workshop-right input:nth-child(4){
+  padding: 1rem 1.5rem;
   text-transform: uppercase;
+  font-weight: bold;
   background-color: black;
   color: white;
   font-family: 'NB';
-  font-size: .75rem;
+  font-size: 1rem;
   border-radius: 20px;
 }
 
@@ -160,6 +164,10 @@
   .workshop-right .workshop-signup-head{
     max-width: 60%;
     text-align: left;
+    align-self: start;
+  }
+  .workshop-right input:nth-child(4){
+    flex-basis: auto;
   }
   .workshop-right img{
     margin-bottom: -2rem;
