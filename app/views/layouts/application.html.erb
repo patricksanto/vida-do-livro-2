@@ -8,10 +8,11 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
   </head>
 
   <body>
-  <% unless action_name == 'new' || action_name == 'create' %>
+  <% unless action_name == 'new' || action_name == 'create'|| action_name == 'main' %>
     <%= render "shared/navbar2" %>
   <% end %>
 
