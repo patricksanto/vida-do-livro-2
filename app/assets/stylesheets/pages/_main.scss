@@ -1,0 +1,371 @@
+.main-page{
+  background-color: #FBF7E6;
+  font-family: 'NB';
+}
+
+.main-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.25rem 0 .5rem 0;
+  background-color: #FBF7E6;
+
+  i{
+    color: black;
+    font-size: 20px;
+  }
+  div{
+    display: flex;
+    justify-content: space-between;
+    gap: 6vw;
+  }
+}
+
+.main-top .main-top-logo{
+  max-width: 80px;
+}
+
+
+
+
+
+
+.main-banner{
+  background-color: #FFFD44;
+  text-align: center;
+
+  img{
+    max-width: 1200px;
+  }
+}
+
+
+
+.main-areas{
+  background-color: #222726;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.main-areas-title{
+  max-width: 1200px;
+  text-align: center;
+}
+
+.main-areas-content{
+  display: grid;
+  grid-template-columns: 1fr 12fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  p{
+    color: #FBF7E6;
+    text-align: left;
+  }
+  img{
+    max-width: 12vw;
+  };
+}
+
+.main-areas-highlight{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+.main-proxima-turma{
+  background-color: #FBF7E6;
+  text-align: center;
+  padding: 1rem 0;
+
+  img{
+    max-width: 1200px
+  };
+}
+
+
+.main-encontros{
+  background-color: #AADCDF;
+  text-align: center;
+
+  h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Nb';
+  }
+  h3{
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Nb';
+  }
+  p{
+    text-align: left;
+    font-family: 'Nb';
+  }
+
+}
+
+.main-encontros-title{
+  max-width: 1000px;
+  margin: 1.5rem auto
+}
+
+
+.main-encontros .encontro{
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  img{
+    max-width: 400px;
+  }
+}
+
+.main-encontros .encontro .encontro-data{
+
+}
+
+
+.main-convidados{
+  max-width: 1100px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  .main-convidados-title{
+    max-width: 1000px;
+    padding: 1.5rem 0;
+  }
+}
+
+.main-convidados .convidados{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem
+}
+
+.convidados .convidado{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  img{
+    max-width: 350px;
+    padding: 1rem 0;
+  }
+  h2{
+    display: none;
+  }
+  h3{
+    display: none;
+  }
+  p{
+    font-size: .825rem;
+    max-width: 40ch;
+  }
+}
+
+
+.main-para-quem{
+  background-color: #224720;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .main-para-quem-title{
+    max-width: 1100px;
+  }
+}
+
+.main-para-quem-content{
+  color: #FBF7E6;
+  display: grid;
+  grid-template-columns: 1fr 12fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  p{
+    text-align: left;
+    font-family: 'Nb';
+    font-size: 1.1rem;
+    margin-top: 1rem;
+
+  }
+  img{
+    max-width: 12vw;
+  }
+}
+
+.main-para-quem-highlight{
+  font-weight: bold;
+  line-height: 1;
+  font-size: 1.5rem;
+  text-align: left!important;
+  padding: 1rem 0;
+}
+
+
+
+.main-sobre{
+  background-color: #FBF7E6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 3rem 0;
+
+  .main-sobre-title{
+    max-width: 1000px;
+    padding: 1rem 0;
+  }
+}
+
+.main-sobre div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1100px;
+
+  img{
+    max-width: 350px;
+  }
+  p{
+    text-align: left;
+    font-family: 'Nb';
+    font-size: 1.1rem;
+    margin-top: 1rem;
+
+  }
+}
+
+
+
+
+
+.main-inscricao{
+  background-color: #FF8FF0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img{
+    max-width: 1100px;
+  }
+}
+
+
+
+.main-faq{
+  background-color: #212726;
+  color: #FCF7E4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 ;
+
+  .duvidas{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+
+  .duvida div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .main-faq-title{
+    max-width: 1000px;
+    margin-bottom: 2rem;
+  }
+}
+
+.duvida div img{
+  max-width: 20px;
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+}
+
+.duvida div h2{
+  font-size: 1.125rem;
+  font-family: 'Nb';
+  font-weight: bold;
+  line-height: .7;
+  margin-top: .5rem;
+}
+
+
+
+
+
+.main-faca-parte{
+  background-color: #A8DCDF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 ;
+}
+
+.main-faca-parte div img{
+  max-width: 1000px;
+}
+
+
+.main-footer{
+  background-color: #FBF7E6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 ;
+
+}
+
+.main-footer-telegram{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  align-items: center;
+  gap: 1rem;
+
+  img{
+    max-width: 100%;
+  }
+  p{
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+}
+
+
+.main-footer .footer-logos{
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin: 2rem 0 1rem 0;
+
+  p{
+    font-size: .825rem;
+  }
+  img{
+    max-width: 60px;
+  }
+}
