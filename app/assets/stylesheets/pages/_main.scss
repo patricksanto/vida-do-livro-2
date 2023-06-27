@@ -43,6 +43,10 @@
 
 
 
+
+
+
+
 .main-areas{
   background-color: #222726;
   text-align: center;
@@ -89,9 +93,16 @@
 }
 
 
+
+
+
+
+
+
 .main-encontros{
   background-color: #AADCDF;
   text-align: center;
+  padding: 1rem 0 2rem 0;
 
   h2{
     font-size: 2.5rem;
@@ -114,7 +125,7 @@
 
 .main-encontros-title{
   max-width: 1000px;
-  margin: 1.5rem auto
+  margin-bottom: 4rem;
 }
 
 
@@ -122,16 +133,48 @@
   display: flex;
   max-width: 1100px;
   margin: 0 auto;
+  ;
 
   img{
     max-width: 400px;
   }
+  h3{
+    margin-bottom: 1.25rem;
+  }
 }
 
+.encontro .encontro-head{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+
+  h2{
+    margin: 0;
+  }
+}
 .main-encontros .encontro .encontro-data{
-
+  display: flex;
+  max-width: fit-content;
+  border: 2px solid white;
+  color: #FBF7E6;
+  font-weight: bold;
+  font-family: 'Nb';
+  line-height: 1;
+  background-color: #222726;
 }
 
+.main-encontros .encontro .encontro-data span:first-child{
+  border-right: 1px solid white;
+  max-width: 5ch;
+  padding: .5rem;
+}
+
+.main-encontros .encontro .encontro-data span:nth-child(2){
+  max-width: 8ch;
+  padding: .5rem;
+}
 
 .main-convidados{
   max-width: 1100px;
