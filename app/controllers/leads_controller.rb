@@ -12,7 +12,7 @@ class LeadsController < ApplicationController
 
   def create
     @lead = Lead.new(lead_params)
-    @lead.tags = ['Videoaula_JohnBThompson_Jun23']
+    @lead.tags << lead_params[:tags]
 
     redirect_to root_path if consult_lead
 
@@ -24,7 +24,7 @@ class LeadsController < ApplicationController
     request['Accept'] = 'application/json'
     request['Content-Type'] = 'application/json'
     request['Authorization'] = "Bearer #{refresh_token}"
-    request.body = { name: @lead.name, email: @lead.email, tags: ['videoaula_johnbthompson_jun23'] }.to_json
+    request.body = { name: @lead.name, email: @lead.email, tags: @lead.tags }.to_json
 
     response = http.request(request)
 
@@ -82,6 +82,6 @@ class LeadsController < ApplicationController
   end
 
   def lead_params
-    params.require(:lead).permit(:email, :name)
+    params.require(:lead).permit(:email, :name, :cellphone_number, :tags)
   end
 end
