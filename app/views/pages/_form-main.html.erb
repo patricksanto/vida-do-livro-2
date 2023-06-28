@@ -10,7 +10,12 @@
       <div><%= message %></div>
     <% end %>
 
-  <%= form.hidden_field :tags, value: 'videoaula_johnbthompson_jun23' %>
+  <%= form.text_field :email, placeholder: 'Email' %>
+    <% @lead.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+
+  <%= form.hidden_field :tags, value: 'proxima_turma_vida_do_livro' %>
 
   <%= form.submit 'ASSISTIR AGORA', class:'workshop-form-submit' %>
 
