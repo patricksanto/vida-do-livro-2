@@ -35,9 +35,17 @@
 .main-banner{
   background-color: #FFFD44;
   text-align: center;
+  max-width: 100%;
+}
 
-  img{
-    max-width: 1200px;
+.main-banner-title{
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+
+  img
+  {
+    max-width: 80%;
   }
 }
 
@@ -51,11 +59,19 @@
   background-color: #222726;
   text-align: center;
   padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .main-areas-title{
-  max-width: 1200px;
-  text-align: center;
+  max-width: 80%;
+
+  img{
+    max-width: 100%;
+  };
 }
 
 .main-areas-content{
@@ -82,16 +98,30 @@
 }
 
 
+
+
+
+
+
+
 .main-proxima-turma{
   background-color: #FBF7E6;
   text-align: center;
   padding: 1rem 0;
-
-  img{
-    max-width: 1200px
-  };
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
+.main-proxima-turma-title{
+  width: 100% !important;
+
+  img{
+    max-width: 80% !important;
+  }
+}
 
 
 
@@ -102,7 +132,7 @@
 .main-encontros{
   background-color: #AADCDF;
   text-align: center;
-  padding: 1rem 0 2rem 0;
+  padding: 1rem 2rem 2rem 2rem;
 
   h2{
     font-size: 2.5rem;
@@ -124,8 +154,12 @@
 }
 
 .main-encontros-title{
-  max-width: 1000px;
+  max-width: 100%;
   margin-bottom: 4rem;
+
+  img{
+    max-width: 80%;
+  }
 }
 
 
@@ -176,6 +210,13 @@
   padding: .5rem;
 }
 
+
+
+
+
+
+
+
 .main-convidados{
   max-width: 1100px;
   text-align: center;
@@ -183,8 +224,14 @@
   padding: 1rem 0;
 
   .main-convidados-title{
-    max-width: 1000px;
+    max-width: 100%;
     padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+
+    img{
+      max-width: 100%;
+    }
   }
 }
 
@@ -196,16 +243,14 @@
   gap: 1rem
 }
 
+
+
 .convidados .convidado{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
 
-  img{
-    max-width: 350px;
-    padding: 1rem 0;
-  }
   h2{
     display: none;
   }
@@ -218,6 +263,16 @@
   }
 }
 
+.convidado-avatar{
+  width: 100%;
+  height: 24rem;
+
+  img{
+    max-width: 350px;
+    padding: 1rem 0;
+  }
+}
+
 
 .main-para-quem{
   background-color: #224720;
@@ -227,7 +282,13 @@
   align-items: center;
 
   .main-para-quem-title{
-    max-width: 1100px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img{
+      max-width: 80%;
+    }
   }
 }
 
@@ -260,6 +321,13 @@
   text-align: left!important;
   padding: 1rem 0;
 }
+
+
+
+
+
+
+
 
 
 
@@ -300,6 +368,10 @@
 
 
 
+
+
+
+
 .main-inscricao{
   background-color: #FF8FF0;
   display: flex;
@@ -334,8 +406,14 @@
     align-items: center;
   }
   .main-faq-title{
-    max-width: 1000px;
+    max-width: 100%;
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+
+    img{
+      max-width: 80%;
+    }
   }
 }
 
@@ -366,8 +444,15 @@
   padding: 2rem 0 ;
 }
 
-.main-faca-parte div img{
-  max-width: 1000px;
+.main-faca-parte div{
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  img{
+    max-width: 80%;
+  }
 }
 
 

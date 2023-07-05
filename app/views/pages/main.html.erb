@@ -11,11 +11,15 @@
   </section>
 
   <section class="main-banner">
-    <%= image_tag 'main-banner.png' %>
+    <div class="main-banner-title">
+      <%= image_tag 'main-banner.png' %>
+    </div>
   </section>
 
   <section class="main-areas">
-    <%= image_tag 'main-areas.png', class:'main-areas-title' %>
+    <div class="main-areas-title">
+      <%= image_tag 'main-areas.png' %>
+    </div>
 
     <div class="main-areas-content">
       <%= image_tag 'areas-stickers-1.png' %>
@@ -31,11 +35,17 @@
   </section>
 
   <section class="main-proxima-turma">
-    <%= image_tag 'proxima-turma.png'%>
+    <div class="main-proxima-turma-title">
+      <%= image_tag 'proxima-turma.png'%>
+    </div>
+    <h2>formulario do RD Station</h2>
   </section>
 
   <section class="main-encontros">
-    <%= image_tag 'main-encontros-title.png', class:'main-encontros-title' %>
+    <div class="main-encontros-title">
+      <%= image_tag 'main-encontros-title.png' %>
+    </div>
+
 
     <div class='encontro'>
       <div>
@@ -116,12 +126,16 @@
 
 
   <section class="main-convidados">
-    <%= image_tag 'main-convidados-title.png', class:'main-convidados-title' %>
+    <div class="main-convidados-title">
+      <%= image_tag 'main-convidados-title.png', class:'main-convidados-title' %>
+    </div>
 
     <div class="convidados">
 
       <div class="convidado">
-        <%= image_tag 'aline-bei.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'aline-bei.png' %>
+        </div>
         <h2>Aline Bei</h2>
         <h3>Escritora</h3>
         <p>A autora de <em>O peso do pássaro morto</em> (vencedor do Prêmio São Paulo de Literatura em 2018) e de <em>Pequena coreografia do adeus</em> ganhou também destaque pelo posicionamento na divulgação de seu romance de estreia, tornando-se exemplo para o mercado.</p>
@@ -129,7 +143,9 @@
       </div>
 
     <div class="convidado">
-        <%= image_tag 'stefano-volp.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'stefano-volp.png' %>
+        </div>
         <h2>Stefano Volp</h2>
         <h3>Escritor</h3>
         <p>Escritor fenômeno de 2022, Stefano Volp, autor de <em>O beijo do rio </em> e<em> Homens pretos (não) choram</em>, divide dicas para autores estreantes, aborda como se preparar para um mercado literário competitivo e fala sobre seu recente lançamento pela TAG, com tiragem superior a 25 mil exemplares.</p>
@@ -137,7 +153,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'raquel-cozer.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'raquel-cozer.png' %>
+        </div>
         <h2>Raquel Cozer</h2>
         <h3>Dir. Ed. HarpperCollins Brasil</h3>
         <p>Atual diretora editorial da HarperCollins Brasil, segundo maior grupo de livros trade do mundo, Raquel foi responsável pela aquisição de sucessos comerciais recentes, como os livros de Rupi Kaur e<em> O caso Evandro</em>, e de obras tão variadas quanto as de Nelson Rodrigues, Ale Santos, Cecelia Ahern e Joyce Carol Oates.</p>
@@ -145,7 +163,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'vagner-amaro.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'vagner-amaro.png' %>
+        </div>
         <h2>Vagner Amaro</h2>
         <h3>Fundador da Malê</h3>
         <p>Fundador, sócio e editor da Malê, desde 2016 Vagner está à frente de uma das mais proeminentes casas focadas em literatura de autoria negra no Brasil, quando começou a editora com a publicação de Conceição Evaristo. </p>
@@ -153,7 +173,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'gustavo-faraon.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'gustavo-faraon.png' %>
+        </div>
         <h2>Gustavo Faraon</h2>
         <h3>Fundador da Dublinense</h3>
         <p>A partir da história da Dublinense, uma das principais editoras de ficção contemporânea no mercado brasileiro, o editor aborda as principais questões sobre gerir uma casa independente: momento de abertura, construção de catálogo, criação de marca, planejamento financeiro, rede de contatos e muito mais.</p>
@@ -161,7 +183,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'lucia-riff.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'lucia-riff.png' %>
+        </div>
         <h2>Lucia Riff</h2>
         <h3>Fundadora da Agência Riff</h3>
         <p>Principal agente literária do país, Lucia é fundadora da Agência Riff. A casa representa alguns dos mais consagrados nomes da literatura brasileira, como João Cabral de Melo Neto, Lygia Fagundes Telles e Rubem Fonseca, e autores da nova geração da escrita nacional, sendo grande ponto de convergência para licenciamentos de contratos com agências de todo o mundo.</p>
@@ -169,7 +193,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'daniel-lopes.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'daniel-lopes.png' %>
+        </div>
         <h2>Daniel Lopes</h2>
         <h3>Editor da Pipoca & Nanquim</h3>
         <p>Um dos sócios e fundadores da Pipoca & Nanquim, conversa sobre as especificidades do mundo da edição de quadrinhos, mas também extrapola o gênero: fala sobre ser uma editora nativamente digital e sobre se comunicar com nichos e unificar bom conteúdo, paixão e profissionalismo, resultando em alguns dos quadrinhos mais vendidos dos últimos anos no país.</p>
@@ -177,7 +203,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'barbara-prince.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'barbara-prince.png' %>
+        </div>
         <h2>Bárbara Prince</h2>
         <h3>Produtora Editorial</h3>
         <p>A produtora editorial ensina o passo a passo para fazer um livro e dá uma aula sobre cada etapa, passando por tradução, preparação de texto, revisão, contratação de colaboradores e gestão de prazos, trazendo exemplos reais de clássicos tão desafiadores quanto <em>O grande Gatsby</em> e <em>Orgulho e preconceito</em>.</p>
@@ -185,7 +213,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'caetano-e-rogerio.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'caetano-e-rogerio.png' %>
+        </div>
         <h2>Caetano + Rogério Galindo</h2>
         <h3>Tradutores</h3>
         <p>Com traduções históricas de <em>Ulysses</em> e <em>Graça infinita</em>, no currículo de Caetano, e <em>Moby Dick</em> e <em>O grande Gatsby</em>, no de Rogerio, os irmãos Galindo colaboram regularmente com grandes casas brasileiras, como Companhia das Letras, Planeta, HarperCollins e Todavia.</p>
@@ -193,7 +223,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'giovana-cianelli.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'giovana-cianelli.png' %>
+        </div>
         <h2>Giovana Cianelli</h2>
         <h3>Designer e Artista Visual</h3>
         <p>Com certeza um livro vende, conquista e se expande pela capa e pelo projeto gráfico. A designer e artista que já trabalhou com diversos autores e editoras, além de ter colaborado com grandes clientes como Anitta, Marina Sena, Apple e Netflix, explica os detalhes do design de um livro, da capa ao projeto gráfico de miolo.</p>
@@ -201,7 +233,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'aline-valli.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'aline-valli.png' %>
+        </div>
         <h2>Aline Valli</h2>
         <h3>Prod. Gráfica da Todavia</h3>
         <p>Com oito anos de experiência na produção da Cosac Naify, passagem pela Ubu e desde o começo à frente da área na Todavia, Aline Valli é uma apaixonada pela produção gráfica editorial e uma das maiores especialistas no assunto.</p>
@@ -209,7 +243,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'andre-castro.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'andre-castro.png' %>
+        </div>
         <h2>André Castro</h2>
         <h3>Consultor Financeiro</h3>
         <p>Apesar de distante para alguns profissionais, entender a área financeira é essencial para pleitear mudanças e caminhos em qualquer empresa. O professor e consultor financeiro ensina, de forma simples e com exemplos práticos, o planejamento básico que uma editora precisa seguir para garantir saúde financeira e como analisar os lucros de um livro.</p>
@@ -217,7 +253,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'luciana-fracchetta.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'luciana-fracchetta.png' %>
+        </div>
         <h2>Luciana Fracchetta</h2>
         <h3>Diretora de Marketing da Antofágica</h3>
         <p>Nesta aula, Luciana ensina os fundamentos do marketing de conteúdo e a importância da construção de comunidades, trazendo exemplos que extrapolam o universo dos livros a partir de empresas como Amazon e Nubank. A apresentação contempla muitos casos que deram certo – e outros que não foram tão certeiros assim.</p>
@@ -225,7 +263,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'giovani-das-gracas.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'giovani-das-gracas.png' %>
+        </div>
         <h2>giovani das Graças</h2>
         <h3>Gerente comercial da Aleph</h3>
         <p>Ponto-chave para o sucesso (ou fracasso) de um título, a área comercial é extremamente complementar ao marketing e ao editorial, auxiliando a refinar estratégias para editoras e autores a partir do conhecimento profundo de uma das últimas etapas da vida do livro.</p>
@@ -233,7 +273,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'daniel-louzada.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'daniel-louzada.png' %>
+        </div>
         <h2>Daniel Louzada</h2>
         <h3>Livreiro da Livraria Leonardo Da Vinci</h3>
         <p>Dono da histórica livraria carioca Leonardo da Vinci, e com mais de 17 anos em alguns dos cargos mais estratégicos na Saraiva, Daniel compartilha sua visão de negócios e sua filosofia de vida, em um debate sobre como podemos pensar a importância do livro, sua comunicação e seu comércio.</p>
@@ -241,7 +283,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'isabela-lubrano.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'isabela-lubrano.png' %>
+        </div>
         <h2>Isabela Lubrano</h2>
         <h3>Jornalista e Criadora de Conteúdo</h3>
         <p>Dona de um canal com quase uma década de existência e mais de 600 mil assinantes, a youtuber compartilha sua história, dos primeiros vídeos e seguidores até o momento em que passou a se dedicar integralmente ao canal Ler Antes de Morrer, incluindo o movimento de profissionalização necessário para fazer esse salto.</p>
@@ -250,7 +294,9 @@
 
 
       <div class="convidado">
-        <%= image_tag 'tiago-pavan.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'tiago-pavan.png' %>
+        </div>
         <h2>Tiago Pavan</h2>
         <h3>Fundador da Dedalog</h3>
         <p>Fundador da DedaLog, empresa que está à frente do e-commerce, marketplace e logística para o leitor de algumas das principais editoras do país, Tiago Pavan conta como decidiu empreender no mercado editorial através da tecnologia.</p>
@@ -258,7 +304,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'marina-avila.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'marina-avila.png' %>
+        </div>
         <h2>Marina Avila</h2>
         <h3>CEO da editora Wish</h3>
         <p>A editora Wish, fundada em 2013, já teve 20 projetos de livros bem-sucedidos no Catarse, que juntos somam uma arrecadação de mais de 2 milhões de reais e dezenas de milhares de exemplares financiados e vendidos, inicialmente por meio do crowdfunding e depois nas lojas.</p>
@@ -266,7 +314,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'gustavo-lembert.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'gustavo-lembert.png' %>
+        </div>
         <h2>Gustavo Lembert</h2>
         <h3>CEO da TAG Livros</h3>
         <p>O cofundador e CEO da TAG, maior clube de assinatura de livros do Brasil, fala sobre o formato de recorrência e assinatura no país, desde os bastidores da fundação da empresa até o momento atual de maior popularização do modelo.</p>
@@ -274,7 +324,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'joana-de-conti.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'joana-de-conti.png' %>
+        </div>
         <h2>Joana de Conti</h2>
         <h3>Gerente de Contas da BookWire</h3>
         <p>Uma das maiores referências em livros digitais do país e gerente de contas da distribuidora multinacional Bookwire, Joana aborda a história dos livros digitais, em qual momento desse mercado estamos e quais são os horizontes de evolução do formato.</p>
@@ -282,7 +334,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'mari-nunes.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'mari-nunes.png' %>
+        </div>
         <h2>Mari Nunes</h2>
         <h3>Produtora Audiovisual</h3>
         <p>O aquecimento do mercado de séries e filmes é acompanhado de perto pelo mundo dos livros. Com a chegada dos streamings no Brasil, a contratação de livros para serem adaptados tem sido mais recorrente e profícua.</p>
@@ -290,7 +344,9 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'claudia-esteves.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'claudia-esteves.png' %>
+        </div>
         <h2>Luciana </h2>
         <h3>Diretora </h3>
         <p>À frente da área de aquisição de conteúdo da Audible, braço da Amazon e líder no mercado global de audiolivros, Claudia explica como funciona esse formato que só cresce nos últimos anos, da relação com agentes, autores e editoras até o desenvolvimento de produtos originais em áudio.</p>
@@ -298,12 +354,16 @@
       </div>
 
       <div class="convidado">
-        <%= image_tag 'convidada-surpresa.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'convidada-surpresa.png' %>
+        </div>
         <h2>Convidada Surpresa</h2>
       </div>
 
       <div class="convidado">
-        <%= image_tag 'convidada-surpresa.png' %>
+        <div class="convidado-avatar">
+          <%= image_tag 'convidada-surpresa.png' %>
+        </div>
         <h2>Convidado Surpresa</h2>
       </div>
 
@@ -312,7 +372,10 @@
   </section>
 
   <section class="main-para-quem">
-    <%= image_tag 'para-quem-e-o-curso.png', class:'main-para-quem-title' %>
+    <div class='main-para-quem-title'>
+      <%= image_tag 'para-quem-e-o-curso.png' %>
+    </div>
+
 
     <div class="main-para-quem-content">
       <%= image_tag 'para-quem-stickers-1.png' %>
@@ -336,12 +399,15 @@
     </div>
   </section>
 
-  <section class="main-inscricao">
+  <%# <section class="main-inscricao">
     <%= image_tag 'inscricao.png' %>
-  </section>
+  <%# </section> %>
 
   <section class="main-faq">
-    <%= image_tag 'duvidas-comuns.png', class:'main-faq-title' %>
+    <div class="main-faq-title">
+      <%= image_tag 'duvidas-comuns.png'%>
+    </div>
+
 
     <div class="duvidas">
       <div class="duvida">
