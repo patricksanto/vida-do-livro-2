@@ -14,7 +14,7 @@ class LeadsController < ApplicationController
     @lead = Lead.new(lead_params)
     @lead.tags << lead_params[:tags]
 
-    redirect_to root_path if consult_lead
+    # redirect_to root_path if consult_lead
 
     url = URI('https://api.rd.services/platform/contacts')
     http = Net::HTTP.new(url.host, url.port)
@@ -32,7 +32,7 @@ class LeadsController < ApplicationController
       result = JSON.parse(response.body)
       puts result
       flash[:notice] = 'Aproveite a masterclass!'
-      redirect_to root_path(anchor: 'workshopform')
+      redirect_to ofuturodolivro_masterclass_path(anchor: 'workshopform')
     else
       if @lead.save
         # redirect_to root_path, notice: 'Aproveite o workshop!'

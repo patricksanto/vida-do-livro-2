@@ -1,7 +1,9 @@
 <div class="main-navbar d-flex justify-content-between align-content-center mx-auto py-4 bg-black"
     data-controller="navbar">
 
-  <%= image_tag "logo-vdl-white.png", class:'vdl-logo' %>
+  <%= link_to root_path do  %>
+    <%= image_tag "logo-vdl-white.png", class:'vdl-logo' %>
+  <% end %>
 
   <ul class="navbar-items">
     <li class="navbar-item"><a href="#apresentacao" class="navbar-link">apresentação</a><span class="navbar-dot">.</span></li>

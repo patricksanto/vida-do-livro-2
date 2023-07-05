@@ -9,6 +9,10 @@ class PagesController < ApplicationController
     @lead = Lead.new
   end
 
+  def main
+    @lead = Lead.new
+  end
+
   def submit
     # response = HTTParty.post('https://api.rd.services/platform/contacts',
     #                           headers: {
