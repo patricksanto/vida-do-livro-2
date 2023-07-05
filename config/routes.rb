@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get 'leads/create'
 
   devise_for :users
-  root to: "pages#home"
-  get '/main', to: 'pages#main'
+  root to: "pages#main"
+  get '/ofuturodolivro_masterclass', to: 'pages#home'
 
   # get '/workshop', to: 'pages#workshop'
 
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   end
 
   resources :leads, only: [:create]
-  get '/workshop', to: 'leads#new'
+  get '/ofuturodolivro', to: 'leads#new'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
