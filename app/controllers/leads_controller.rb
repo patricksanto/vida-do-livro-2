@@ -1,5 +1,5 @@
 class LeadsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :new, :create]
+  skip_before_action :authenticate_user!, only: [ :new, :create, :waiting_list]
 
   def new
     @lead = Lead.new
@@ -9,6 +9,39 @@ class LeadsController < ApplicationController
   # def initialize
   #   @access_token = ''
   # end
+
+  def waiting_list
+    @lead = Lead.new(lead_params)
+    @lead.tags << lead_params[:tags]
+
+    # redirect_to root_path if consult_lead
+
+    url = URI('https://api.rd.services/platform/contacts')
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = true
+
+    request = Net::HTTP::Post.new(url)
+    request['Accept'] = 'application/json'
+    request['Content-Type'] = 'application/json'
+    request['Authorization'] = "Bearer #{refresh_token}"
+    request.body = { name: @lead.name, email: @lead.email, tags: @lead.tags }.to_json
+
+    response = http.request(request)
+
+    if response.is_a?(Net::HTTPSuccess)
+      result = JSON.parse(response.body)
+      puts result
+      flash[:notice] = 'Email cadastrado na lista de espera'
+      redirect_to root_path(anchor: 'form')
+    else
+      if @lead.save
+        # redirect_to root_path, notice: 'Aproveite o workshop!'
+        p 'Lead salvo so na DB local'
+      else
+        render :new, status: :unprocessable_entity
+      end
+    end
+  end
 
   def create
     @lead = Lead.new(lead_params)
