@@ -38,28 +38,19 @@
     <div class="main-proxima-turma-title">
       <%= image_tag 'proxima-turma.png'%>
     </div>
-
     <div>
-      <%= form_with model: @lead do |form| %>
+      <p>Caso tenha interesse em ser informado sobre a próxima turma do Vida do Livro e futuros cursos abordando mercado editorial, escrita e arte, deixe seu contato para te avisarmos!</p>
+    </div>
+
+    <div id="form">
+      <%= form_with model: @lead, url: "/waiting_list", method: :post  do |form| %>
 
         <%= form.text_field :name, placeholder: 'Nome' %>
-          <% @lead.errors.full_messages_for(:name).each do |message| %>
-            <div><%= message %></div>
-          <% end %>
-
         <%= form.text_field :email, placeholder: 'Email' %>
-          <% @lead.errors.full_messages_for(:email).each do |message| %>
-            <div><%= message %></div>
-          <% end %>
-
-        <%= form.telephone_field :phone, placeholder: 'Telefone' %>
-          <% @lead.errors.full_messages_for(:phone).each do |message| %>
-            <div><%= message %></div>
-          <% end %>
-
+        <%= form.telephone_field :cellphone_number, placeholder: 'Telefone' %>
         <%= form.hidden_field :tags, value: 'proxima_turma_vida_do_livro' %>
 
-        <%= form.submit 'ASSISTIR AGORA', class:'workshop-form-submit' %>
+        <%= form.submit 'ENVIAR', class:'workshop-form-submit' %>
 
       <% end %>
     </div>

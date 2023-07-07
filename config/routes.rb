@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     post 'submit', on: :collection
   end
 
+  post '/waiting_list', to: 'leads#waiting_list'
+
   resources :leads, only: [:create]
   get '/ofuturodolivro', to: 'leads#new'
 
