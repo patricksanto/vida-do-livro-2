@@ -20,6 +20,7 @@ class LeadsController < ApplicationController
     @lead = Lead.find_or_initialize_by(email: lead_params[:email])
     @lead.assign_attributes(lead_params)
     @lead.tags << lead_params[:tags]
+    @lead.save!
 
     url = URI('https://api.rd.services/platform/contacts')
     http = Net::HTTP.new(url.host, url.port)
@@ -54,7 +55,7 @@ class LeadsController < ApplicationController
     request["accept"] = 'application/json'
     request["content-type"] = 'application/json'
     request['Authorization'] = "Bearer #{refresh_token}"
-    request.body = "{\"tags\":[\"videoaula_johnbthompson_jun23\"]}"
+    request.body = "{\"tags\":[\"#{@lead.tags.last}\"]}"
 
     response = http.request(request)
 
