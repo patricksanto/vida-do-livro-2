@@ -1,20 +1,40 @@
 
 
 <section class="hero px-2 px-md-4" id="apresentaçao">
-  <h1 class="hero-title">
+  <div class="hero-title-div">
+    <h1 class="hero-title">
   O Futuro do Livro: a revolução digital no mundo das publicações
-  </h1>
+    </h1>
+  </div>
+
   <div class="hero-title-mobile">
     <h1 class="hero-title-mobile-first-line">O Futuro do Livro:</h1>
     <h1 class="hero-title-mobile-second-line">a revolução digital no mundo das publicações</h1>
   </div>
 
-  <div class="hero-description pb-4 pb-md-0">
+  <%# <div class="hero-description pb-4 pb-md-0">
     <p>Todos nós, que dedicamos a vida ao fazer e ao pensar o mundo dos livros, nos questionamos para onde caminha o futuro da mídia. Para falar sobre isso, convidei um dos maiores especialistas do mundo, John B. Thompson, professor de Cambridge e ministrante desta masterclass. </p>
     <p>Entre os temas abordados estão o crescimento constante da Amazon, storytelling de marcas, novas formas de monetização e o próprio conceito do que é um livro.</p>
     <p>Gostei muito do resultado, e como esse é um assunto que acredito ser urgente para nós e para o bem do nosso mercado, resolvi disponibilizar o conteúdo gratuitamente. Espero que gostem.</br> </br>Daniel Lameira</p>
+  </div> %>
+  <%= image_tag 'hero-arrow.png', class:'hero-arrow'%>
+</section>
+
+<section class="masterclass-sobre">
+  <div class="masterclass-sobre-content">
+    <div class="masterclass-sobre-icon">
+      <%= image_tag 'masterclass-sticker.png', class:"masteclass-sticker"%>
+    </div>
+    <p>Todos nós, que dedicamos a vida ao fazer e ao pensar o mundo dos livros, nos questionamos para onde caminha o futuro da mídia. Para falar sobre isso, convidei um dos maiores especialistas do mundo, John B. Thompson, professor de Cambridge e ministrante desta masterclass.
+    </p>
+    <p>Entre os temas abordados estão o crescimento constante da Amazon, storytelling de marcas, novas formas de monetização e o próprio conceito do que é um livro.
+    </p>
+    <p>Gostei muito do resultado, e como esse é um assunto que acredito ser urgente para nós e para o bem do nosso mercado, resolvi disponibilizar o conteúdo gratuitamente. Espero que gostem.
+    </p>
+    <h2>Daniel Lameira</h2>
+    <span>Organizador da Masterclass</span>
   </div>
-  <%= image_tag 'arrow-white.png', class:'hero-arrow'%>
+
 </section>
 
 <section class="video" id="video">
@@ -48,8 +68,8 @@
 
   <div class="sobre-logos">
     <p>© Vida do Livro</p>
-    <%= image_tag 'seiva-white.png', class:"seiva-logo"%>
-    <%= image_tag 'logo-sonhorama-white.png' %>
+    <%= image_tag 'seiva_pb.png', class:"seiva-logo"%>
+    <%= image_tag 'logo-sonhorama.png' %>
   </div>
 
 </section>

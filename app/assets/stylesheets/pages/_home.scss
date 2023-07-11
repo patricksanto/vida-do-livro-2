@@ -15,15 +15,29 @@
   align-items: center;
   justify-content: flex-end;
   padding-bottom: 3vw;
+  position: relative;
+}
+.hero-title-div{
+  width: 100%;
+  padding: 3vw;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
 }
 .hero-title{
-  font-family: 'NB';
+  font-family: 'Druk';
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  font-size: 3.2rem;
-  padding-top: 22rem;
+  font-size: 6.4vw !important;
+  // padding-top: 22rem;
   line-height: 1.1;
+  letter-spacing: .3vw;
+  max-width: 88%;
+  color: #EFEDDC;
 }
 .hero-title-mobile{
   display: none;
@@ -47,12 +61,74 @@
 }
 
 .hero-arrow{
-  max-width: 1.5rem;
-  margin-top: 2.5rem;
+  max-width: 3vw;
+  margin-top: 3vw;
+  margin-bottom: 1.3vw;
 }
 
-.video{
+
+
+
+
+
+
+
+.masterclass-sobre{
+  width: 100%;
   background-color: $creme;
+  color: black;
+  height: 100vh;
+  position: relative;
+}
+
+.masterclass-sobre-icon{
+  position: relative;
+}
+.masterclass-sobre img{
+  position: absolute;
+  top: -3.5vw;
+  left: -5.1vw;
+  max-width: 6vw;
+}
+
+.masterclass-sobre-content{
+  width: 38%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+
+.masterclass-sobre-content p {
+  font-family: 'NB';
+  font-size: 1.4vw !important;
+  margin-bottom: 2vw;
+}
+
+.masterclass-sobre-content h2{
+  font-family: 'CheltanhamBT';
+  text-transform: uppercase;
+  font-size: 2.3vw;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.masterclass-sobre-content span {
+  font-family: 'NB';
+  font-size: 1.1vw;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+
+
+
+
+
+
+
+.video{
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,30 +136,12 @@
   // padding: 0 1rem;
 }
 
-// iframe{
-//   width: 100%;
-//   height: 100%;
-//   max-width: 100%;
-//   max-height: 100%;
-//   border: none;
-//   margin: 0 auto;
-//   padding: 0;
-//   display: block;
-//   overflow: hidden;
-// }
-
 .video-container{
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   margin: 1.5rem 6vw 0rem 6vw;
   height: 0;
   padding-top: 10px;
   padding-bottom: 56.25%;
   position: relative;
-  // border: 1px solid red;
-
 }
 
 .video-container iframe{
@@ -96,41 +154,57 @@
 }
 
 .video-description{
-  color: black;
+  color: $creme;
   display: grid;
   grid-gap: 1.5rem;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 1rem 6vw;
+  padding: 1rem 3vw;
   align-items: end;
+  margin-bottom: 2vw;
 }
 
 .video-description p{
   font-family: 'NB';
-  font-size: .75rem;
-  line-height: 1.2;
+  font-size: 1.2vw;
+  line-height: 1.125;
   font-weight: normal;
+  margin-bottom: 0;
 }
 
 .video-description h2{
   font-family: 'NB';
-  font-size: 3.5rem;
+  font-size: 5vw;
   line-height: .85;
   letter-spacing: -0.05em;
   position: relative;
   width: 9ch;
+  margin-bottom: 0;
 }
 
-.video-description h2::after{
-  content: 'sobre o professor';
+.video-description h2::before{
+  content: 'sobre';
   position: absolute;
   font-family: 'NB';
-  font-size: 2vw;
+  font-size: 1.4vw;
   font-weight: normal;
-  top: 5px;
-  right: 15%;
+  top: 5%;
+  right: 15.5%;
   letter-spacing: normal;
   text-transform: downcase;
   width: 7ch;
+}
+
+.video-description h2::after{
+  content: 'o professor';
+  position: absolute;
+  font-family: 'NB';
+  font-size: 1.4vw;
+  font-weight: normal;
+  top: 20%;
+  right: 11%;
+  translate: translateX(-50%);
+  letter-spacing: normal;
+  text-transform: downcase;
 }
 
 .video-description .video-description-last-paragraph{
@@ -139,21 +213,23 @@
 
 
 .sobre{
-  background-color: #2A3030;
-  color: $creme;
-  padding: 2.5rem 2.5rem;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  background-color: #FFFC59;
+  color: black;
+  padding: 2.5rem 3vw;
+  display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
+}
 
-  p{
+.sobre .sobre-paragraph{
   display: inline-block;
   font-family: 'NB';
-  font-size: .75rem;
+  font-size: 1.2vw;
   line-height: 1.2;
   font-weight: normal;
-  }
+  align-self: end;
+  max-width: 40ch;
+  margin-bottom: 0;
 }
 
 .sobre-logos{
@@ -165,12 +241,17 @@
 
   p{
     margin: 0;
+    font-size: 1vw !important;
+    padding: 0;
+    line-height: 1;
+    letter-spacing: normal;
   }
 }
 
 .sobre img{
   max-width: 100%;
-  width: 100px;
+  width: 5vw;
+  margin-bottom: 4px;
 }
 
 
@@ -317,34 +398,34 @@
 // FOR
 // DESKTOPS
 @media (min-width: 1100px) {
-  .video-description .masterclass-john{
-    font-size: 4vw !important;
-  }
-  .video-description h2::after{
-    font-size: 1vw;
-    right: 15%;
-  }
+  // .video-description .masterclass-john{
+  //   font-size: 4vw !important;
+  // }
+  // .video-description h2::after{
+  //   font-size: 1vw;
+  //   right: 15%;
+  // }
 }
 
 @media (min-width: 1400px) {
   // .hero, .video, .sobre, .video-container, .video-container video{
   //   max-width: 1400px;
   // }
-  .video{
-    margin: 0;
-  }
+  // .video{
+  //   margin: 0;
+  // }
 
   //
   // HERO
   //
 
-  .hero .hero-title{
-    font-size: 4.2rem;
-  }
+  // .hero .hero-title{
+  //   font-size: 4.2rem;
+  // }
 
-  .hero .hero-description{
-    width: inherit;
-  }
+  // .hero .hero-description{
+  //   width: inherit;
+  // }
 
   //
   // VIDEO
@@ -362,10 +443,10 @@
   //
   //  ALL PARAGRAPHS
   //
-  .hero p, .video p, .sobre p{
-    font-size: 1.1rem;
-    // line-height: 1.2;
-  }
+  // .hero p, .video p, .sobre p{
+  //   font-size: 1.1rem;
+  //   // line-height: 1.2;
+  // }
 }
 
 // @media (min-width: 2400px) {
