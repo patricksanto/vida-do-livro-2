@@ -240,7 +240,7 @@
 
       <div class="convidado">
         <div class="convidado-avatar">
-          <%= image_tag 'giovana-cianelli.png' %>
+          <%= image_tag 'gi-vdl.png' %>
         </div>
         <h2>Giovana Cianelli</h2>
         <h3>Designer e Artista Visual</h3>
@@ -371,9 +371,10 @@
 
       <div class="convidado">
         <div class="convidado-avatar">
-          <%= image_tag 'convidada-surpresa.png' %>
+          <%= image_tag 'jiro-vdl.png' %>
         </div>
         <h2>Convidada Surpresa</h2>
+        Com mais de 50 anos de experiência no mercado editorial, Jiro Takahashi acumula passagens por casas brasileiras como Ática, Nova Fronteira, Estação Liberdade (da qual foi co-fundador), Ediouro, Rocco e Nova Aguilar. Foi idealizador, entre outras, da série Vaga-Lume, amplamente adotada em escolas brasileiras e parte da formação leitora de milhões de estudantes.
       </div>
 
       <div class="convidado">
@@ -381,6 +382,7 @@
           <%= image_tag 'convidada-surpresa.png' %>
         </div>
         <h2>Convidado Surpresa</h2>
+        <p></p>
       </div>
 
     </div>
@@ -409,12 +411,13 @@
 
   <section class="main-sobre">
     <div class="main-sobre-title">
-      <%= image_tag 'professor-e-organizador.png' %>
+      <%= image_tag 'daniel-lameira.png', class:'main-sobre-dani-responsivo' %>
+      <%= image_tag 'professor-e-organizador.png', class:'title' %>
     </div>
 
-    <div>
+    <div class="main-sobre-dani">
       <%= image_tag 'daniel-lameira.png' %>
-      <p><strong>Daniel Lameira</strong> é editor, diretor criativo e consultor para o mercado editorial. É um dos fundadores da Antofágica e está há sete anos à frente da direção editorial da Aleph, além de ter passado por casas como Intrínseca, Novo Século e LeYa, FNAC e Livraria da Vila. Vencedor do prêmio <em>Rising Star </em>(2015), que teve apoio da Feira do Livro de Frankfurt em parceria com SNEL e PublishNews, figura no livro <em>100 nomes da edição no Brasil</em> como um dos Editores do Futuro. Em 2015, criou o curso Vida do Livro, que desde então já formou mais de 1.000 alunos.</p>
+      <p><strong>Daniel Lameira</strong> é editor, diretor criativo e consultor para o mercado editorial. É um dos fundadores da Antofágica e esteve durante sete anos à frente da direção editorial da Aleph, além de ter passado por casas como Intrínseca, Novo Século e LeYa, FNAC e Livraria da Vila. Vencedor do prêmio <em>Rising Star </em>(2015), que teve apoio da Feira do Livro de Frankfurt em parceria com SNEL e PublishNews, figura no livro <em>100 nomes da edição no Brasil</em> como um dos Editores do Futuro. Em 2015, criou o curso Vida do Livro, que desde então já formou mais de 1.000 alunos.</p>
     </div>
   </section>
 
@@ -519,12 +522,13 @@
     </div>
   </section>
 
+
   <section class="main-faca-parte">
-
-    <div>
-      <%= image_tag 'faca-parte.png' %>
-    </div>
-
+    <a href="#form">
+      <div>
+        <%= image_tag 'faca-parte.png' %>
+      </div>
+    </a>
   </section>
 
   <section class="main-footer">
@@ -533,7 +537,9 @@
       Entre agora no grupo aberto <strong>Vida do Livro </strong>no Telegram para receber conteúdos exclusivos e conversar com outros membros:
       </p>
 
-      <%= image_tag 'grupo-vdl.png' %>
+      <a href="https://t.me/vidadolivro" target="blank">
+        <%= image_tag 'grupo-vdl.png' %>
+      </a>
 
     </div>
 
