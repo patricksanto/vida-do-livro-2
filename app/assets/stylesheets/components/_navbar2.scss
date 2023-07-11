@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 1rem 2.5rem;
+  padding: 2vw 3vw;
   z-index: 2;
   transition: all 0.3s ease-in-out;
 
@@ -14,8 +14,8 @@
 }
 
 .vdl-logo{
-  max-width: 100px;
-  max-height: 40px;
+  max-width: 8vw;
+  max-height: 4vw;
 }
 
 .navbar-items{
@@ -30,7 +30,7 @@
   justify-content: space-between;
   align-items: center;
   font-family: 'NB';
-  font-size: .75rem;
+  font-size: .75vw;
   border: 1px solid white;
   transition: all 0.3s ease-in-out;
   text-transform: uppercase;

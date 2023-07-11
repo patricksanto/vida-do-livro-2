@@ -26,7 +26,12 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "Druk";
+  src: font-url('Druk_Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
 $headers-font: "Nunito", "Helvetica", "sans-serif";
