@@ -173,7 +173,7 @@
     max-width: 15ch;
     text-align: left;
     align-self: start;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 1rem 0 0 1rem;
     margin-bottom: 0;
   }
@@ -183,6 +183,7 @@
 
   .workshop-signup form{
     display: grid;
+    max-width: 100%;
     align-items: center;
     grid-template-columns: 3fr 1fr;
     padding: 1rem;
@@ -190,7 +191,7 @@
   .workshop-signup form #lead_name,
   .workshop-signup form #lead_email{
     grid-column: 1 / span 1;
-    font-size: 16px;
+    font-size: .8rem;
   }
   .workshop-signup form .workshop-form-submit{
     // grid-column: 1 / span 1;
@@ -204,7 +205,7 @@
   }
 
   .workshop-right img{
-    margin-bottom: -2rem;
+    // margin-bottom: -3rem;
     max-width: 80%;
     align-self: center;
     margin-top: 1rem;
