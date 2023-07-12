@@ -9,100 +9,69 @@
   color: $creme;
   background-color: black;
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  padding-bottom: 3vw;
-  position: relative;
+  // align-items: center;
 }
 .hero-title-div{
   width: 100%;
-  padding: 3vw;
+  // padding: 3vw;
   display: flex;
   justify-content: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 10%;
+  margin-top: 10rem;
+
 }
 .hero-title{
-  font-family: 'Druk';
+  font-family: 'NB';
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  font-size: 6.4vw !important;
+  font-size: 3.89vw !important;
   // padding-top: 22rem;
   line-height: 1.1;
-  letter-spacing: .3vw;
-  max-width: 88%;
+  letter-spacing: .1vw;
   color: #EFEDDC;
+  margin: 0;
+  padding: 0;
 }
 .hero-title-mobile{
   display: none;
 }
 
-.hero-description{
-  max-width: fit-content;
-  font-family: 'NB';
-  font-size: .75rem;
-  line-height: 1.2;
-  font-weight: normal;
+.hero-arrow-link{
   display: flex;
   justify-content: center;
-  align-items: end;
-  gap: 20px;
-  padding-top: 1rem;
-
-  p{
-    flex-basis: 30%;
-  }
+  width: 100%;
 }
-
 .hero-arrow{
   max-width: 3vw;
   margin-top: 3vw;
   margin-bottom: 1.3vw;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-arrow:hover {
+  opacity: 0.8;
+  scale: 1.1
 }
 
 
-
-
-
-
-
-
-.masterclass-sobre{
-  width: 100%;
-  background-color: $creme;
-  color: black;
-  height: 100vh;
-  position: relative;
-}
-
-.masterclass-sobre-icon{
-  position: relative;
-}
-.masterclass-sobre img{
-  position: absolute;
-  top: -3.5vw;
-  left: -5.1vw;
-  max-width: 6vw;
-}
 
 .masterclass-sobre-content{
-  width: 38%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%);
+  width: 48%;
+  justify-items: flex-start;
+  padding: 0 1.6vw;
+  margin-top: 3rem
 }
 
 .masterclass-sobre-content p {
   font-family: 'NB';
-  font-size: 1.4vw !important;
+  font-size: 1.2vw !important;
   margin-bottom: 2vw;
+  line-height: 1.25;
 }
 
 .masterclass-sobre-content h2{
@@ -128,7 +97,7 @@
 
 
 .video{
-  background-color: black;
+  background-color: $creme;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -154,7 +123,7 @@
 }
 
 .video-description{
-  color: $creme;
+  color: $black;
   display: grid;
   grid-gap: 1.5rem;
   grid-template-columns: 1fr 1fr 1fr;
@@ -224,11 +193,11 @@
 .sobre .sobre-paragraph{
   display: inline-block;
   font-family: 'NB';
-  font-size: 1.2vw;
+  font-size: .85vw;
   line-height: 1.2;
   font-weight: normal;
   align-self: end;
-  max-width: 40ch;
+  max-width: 48ch;
   margin-bottom: 0;
 }
 
@@ -241,7 +210,7 @@
 
   p{
     margin: 0;
-    font-size: 1vw !important;
+    font-size: .7vw !important;
     padding: 0;
     line-height: 1;
     letter-spacing: normal;
@@ -250,7 +219,7 @@
 
 .sobre img{
   max-width: 100%;
-  width: 5vw;
+  width: 3.5vw;
   margin-bottom: 4px;
 }
 
