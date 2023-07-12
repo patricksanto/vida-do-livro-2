@@ -14,8 +14,6 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: end;
-  // align-items: center;
 }
 .hero-title-div{
   width: 100%;
@@ -42,6 +40,34 @@
   display: none;
 }
 
+.masterclass-sobre-content{
+  justify-items: flex-start;
+  padding: 0 3vw;
+  margin-top: 2rem;
+}
+
+.masterclass-sobre-content p {
+  font-family: 'NB';
+  font-size: 1.1vw;
+  margin-bottom: 1.3vw;
+  line-height: 1.2;
+  max-width: 52ch;
+}
+
+.masterclass-sobre-content h2{
+  font-family: 'NB';
+  font-size: 2.3vw;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.masterclass-sobre-content span {
+  font-family: 'NB';
+  font-size: 1vw;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
 .hero-arrow-link{
   display: flex;
   justify-content: center;
@@ -59,12 +85,12 @@
   scale: 1.1
 }
 
+
 @media (max-width: 570px){
   .hero{
     display: grid;
     grid-template-columns: 4fr 5fr;
     padding: 5rem 1rem 0 1rem;
-
   }
 
   .hero-title-div{
@@ -74,7 +100,7 @@
   .hero-title-mobile{
     display: block;
     font-family: 'NB';
-    margin-left: .5rem;
+    // margin-left: .5rem;
   }
 
   .hero-title-mobile h1{
@@ -91,12 +117,13 @@
     max-width: 12ch;
   }
   .masterclass-sobre-content{
-    width: 100% !important;
     padding: 0 1.6vw;
     margin-top: 0 !important;
   }
   .masterclass-sobre-content p {
-    font-size: .9rem !important;
+    max-width: 30ch !important;
+    font-size: .85rem !important;
+    margin-bottom: .5rem;
   }
   .masterclass-sobre-content h2 {
     font-size: 1.3rem !important;
@@ -123,33 +150,7 @@
 
 
 
-.masterclass-sobre-content{
-  justify-items: flex-start;
-  padding: 0 1.6vw;
-  margin-top: 2rem;
-}
 
-.masterclass-sobre-content p {
-  font-family: 'NB';
-  font-size: 1.1vw;
-  margin-bottom: 1.3vw;
-  line-height: 1.2;
-  width: 52ch;
-}
-
-.masterclass-sobre-content h2{
-  font-family: 'NB';
-  font-size: 2.3vw;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.masterclass-sobre-content span {
-  font-family: 'NB';
-  font-size: 1vw;
-  text-transform: uppercase;
-  margin-top: 2px;
-}
 
 
 
@@ -216,31 +217,31 @@
   margin-bottom: 0;
 }
 
-.video-description h2::before{
-  content: 'sobre';
-  position: absolute;
-  font-family: 'NB';
-  font-size: 1.4vw;
-  font-weight: normal;
-  top: 5%;
-  right: 15.5%;
-  letter-spacing: normal;
-  text-transform: downcase;
-  width: 7ch;
-}
+// .video-description h2::before{
+//   content: 'sobre';
+//   position: absolute;
+//   font-family: 'NB';
+//   font-size: 1.4vw;
+//   font-weight: normal;
+//   top: 5%;
+//   right: 15.5%;
+//   letter-spacing: normal;
+//   text-transform: downcase;
+//   width: 7ch;
+// }
 
-.video-description h2::after{
-  content: 'o professor';
-  position: absolute;
-  font-family: 'NB';
-  font-size: 1.4vw;
-  font-weight: normal;
-  top: 20%;
-  right: 11%;
-  translate: translateX(-50%);
-  letter-spacing: normal;
-  text-transform: downcase;
-}
+// .video-description h2::after{
+//   content: 'o professor';
+//   position: absolute;
+//   font-family: 'NB';
+//   font-size: 1.4vw;
+//   font-weight: normal;
+//   top: 20%;
+//   right: 11%;
+//   translate: translateX(-50%);
+//   letter-spacing: normal;
+//   text-transform: downcase;
+// }
 
 .video-description .video-description-last-paragraph{
   display: none;
@@ -254,15 +255,15 @@
     grid-gap: 1rem;
     padding: 0 1rem 1rem 1rem;
   }
-  .video-description h2::after{
-    display: none;
-  }
-  .video-description h2::before{
-    display: none;
-  }
-  .video-description h2::after{
-    display: none;
-  }
+  // .video-description h2::after{
+  //   display: none;
+  // }
+  // .video-description h2::before{
+  //   display: none;
+  // }
+  // .video-description h2::after{
+  //   display: none;
+  // }
 
   .video-description .masterclass-john{
     font-size: 2rem !important;
