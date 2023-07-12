@@ -14,6 +14,8 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: end;
+  padding-bottom: 1rem;
 }
 .hero-title-div{
   width: 100%;
@@ -56,7 +58,7 @@
 
 .masterclass-sobre-content h2{
   font-family: 'NB';
-  font-size: 2.3vw;
+  font-size: 1.1vw;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -173,7 +175,7 @@
 }
 
 .video-container{
-  margin: 1.5rem 6vw 0rem 6vw;
+  margin: -2rem 11vw -3rem 11vw;
   height: 0;
   padding-top: 10px;
   padding-bottom: 56.25%;
@@ -192,6 +194,7 @@
 .video-description{
   color: $black;
   display: grid;
+  width: 100%;
   grid-gap: 1.5rem;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 1rem 3vw;
@@ -205,6 +208,7 @@
   line-height: 1.125;
   font-weight: normal;
   margin-bottom: 0;
+
 }
 
 .video-description h2{
@@ -248,6 +252,9 @@
 }
 
 @media (max-width: 570px){
+  .video-container{
+    margin: 1rem;
+  }
   .video-description{
     grid-template-columns: 1fr 1fr;
     align-items: start;
@@ -369,6 +376,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 1.5rem;
+    margin-bottom: 1rem;
   }
   .sobre-logos p{
     grid-column: 1 / span 2;
@@ -380,6 +388,8 @@
     scale: 3;
     margin: 0 .5rem;
   }
+
+
   .seiva-logo{
     justify-self: end;
   }
