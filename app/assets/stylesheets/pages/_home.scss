@@ -9,10 +9,12 @@
   color: $creme;
   background-color: black;
   height: 100vh;
+  max-height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: end;
   // align-items: center;
 }
 .hero-title-div{
@@ -20,7 +22,7 @@
   // padding: 3vw;
   display: flex;
   justify-content: center;
-  margin-top: 10rem;
+  margin-top: 8rem;
 
 }
 .hero-title{
@@ -49,7 +51,6 @@
   max-width: 3vw;
   margin-top: 3vw;
   margin-bottom: 1.3vw;
-  display: block;
   transition: all 0.3s ease-in-out;
 }
 
@@ -123,22 +124,21 @@
 
 
 .masterclass-sobre-content{
-  width: 48%;
   justify-items: flex-start;
   padding: 0 1.6vw;
-  margin-top: 3rem
+  margin-top: 2rem;
 }
 
 .masterclass-sobre-content p {
   font-family: 'NB';
-  font-size: 1.2vw;
-  margin-bottom: 2vw;
-  line-height: 1.25;
+  font-size: 1.1vw;
+  margin-bottom: 1.3vw;
+  line-height: 1.2;
+  width: 52ch;
 }
 
 .masterclass-sobre-content h2{
-  font-family: 'CheltanhamBT';
-  text-transform: uppercase;
+  font-family: 'NB';
   font-size: 2.3vw;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -146,7 +146,7 @@
 
 .masterclass-sobre-content span {
   font-family: 'NB';
-  font-size: 1.1vw;
+  font-size: 1vw;
   text-transform: uppercase;
   margin-top: 2px;
 }
