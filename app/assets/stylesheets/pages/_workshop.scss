@@ -10,7 +10,7 @@
   flex-basis: 65%;
   background-color: black;
   color: #EEECDD;
-  padding: 2rem;
+  padding: 3vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,7 +40,7 @@
 
 .masterclass-title{
   font-family: 'NB';
-  font-size: 6rem;
+  font-size: 7.2vw;
   margin-bottom: 1rem;
   // max-width: 40%;
   line-height: .9;
@@ -50,7 +50,7 @@
 .masterclass-subtitle{
   // max-width: 35%;
   font-family: 'NB';
-  font-size: 1.8rem;
+  font-size: 2.6vw;
   line-height: 1.1;
   margin: 0;
   max-width: 19ch;
@@ -58,7 +58,7 @@
 .masterclass-paragraphe{
   max-width: 35ch;
   font-family: 'NB';
-  font-size: 1rem;
+  font-size: 1.8vw;
   color: $green;
   line-height: 1.1;
   margin-top: 1rem;
@@ -75,7 +75,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 3vw;
 }
 
 .workshop-right .workshop-signup{
@@ -85,9 +85,10 @@
 .workshop-right .workshop-signup-head{
   text-align: center;
   font-family: 'NB';
-  font-size: 1.5rem;
+  font-size: 2vw;
   max-width: 15ch;
   align-self: center;
+  margin-bottom: 1rem;
 }
 .workshop-right form{
   display: flex;
@@ -98,13 +99,13 @@
   border: 1px solid black;
   background-color: transparent;
   padding: .7rem 1.5rem;
-  font-size: .75rem;
+  font-size: 1vw;
   font-family: 'NB';
   margin-bottom: .5rem;
   flex-grow: 1;
 }
 
-.workshop-right input:nth-child(4){
+.workshop-right input:nth-child(5){
   padding: 1rem 1.5rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -117,7 +118,7 @@
 
 .workshop-right img{
   max-width: 100%;
-  margin-bottom: -2rem;
+  margin-bottom: -3vw;
   // width: 80%;
 }
 
@@ -159,6 +160,7 @@
   }
   .masterclass-paragraphe{
     max-width: 100%;
+    font-size: 1.2rem;
   }
 
 
@@ -168,9 +170,12 @@
   //   flex-basis: 100%;
   // }
   .workshop-right .workshop-signup-head{
-    max-width: 60%;
+    max-width: 15ch;
     text-align: left;
     align-self: start;
+    font-size: 1.8rem;
+    padding: 1rem 0 0 1rem;
+    margin-bottom: 0;
   }
   // .workshop-right input:nth-child(4){
   //   flex-basis: auto;
@@ -180,6 +185,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: 3fr 1fr;
+    padding: 1rem;
   }
   .workshop-signup form #lead_name,
   .workshop-signup form #lead_email{
@@ -206,21 +212,21 @@
 }
 
 @media (min-width: 1400px){
-  .workshop-left .masterclass-paragraphe{
-    font-size: 1.3rem;
-  }
+  // .workshop-left .masterclass-paragraphe{
+  //   font-size: 1.3rem;
+  // }
 
-  .workshop-right .workshop-signup-head{
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  .workshop-right input{
-    font-size: 1rem;
-    padding: .9rem 1.5rem;
-  }
-  .workshop-right button{
-    font-size: 1.2rem;
-    padding: .9rem 1.5rem;
-  }
+  // .workshop-right .workshop-signup-head{
+  //   font-size: 2rem;
+  //   margin-bottom: 1rem;
+  // }
+  // .workshop-right input{
+  //   font-size: 1rem;
+  //   padding: .9rem 1.5rem;
+  // }
+  // .workshop-right button{
+  //   font-size: 1.2rem;
+  //   padding: .9rem 1.5rem;
+  // }
 
 }

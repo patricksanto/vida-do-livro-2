@@ -35,7 +35,7 @@ class LeadsController < ApplicationController
     response = http.request(request)
 
     if response.is_a?(Net::HTTPSuccess)
-      flash[:notice] = 'Email cadastrado na lista de espera'
+      flash[:notice] = notice_message
       redirect_to redirect_path
     elsif response.is_a?(Net::HTTPClientError) && JSON.parse(response.body)["errors"]["error_type"] == "EMAIL_ALREADY_IN_USE"
       handle_existing_lead
@@ -60,7 +60,7 @@ class LeadsController < ApplicationController
     response = http.request(request)
 
     if response.is_a?(Net::HTTPSuccess)
-      flash[:notice] = 'Aproveite a masterclass!'
+      flash[:notice] = notice_message
       redirect_to redirect_path
     else
       render :new, status: :unprocessable_entity
@@ -87,10 +87,19 @@ class LeadsController < ApplicationController
   end
 
   def redirect_path
-    if lead_params[:tags] == 'proxima_turma_vida_do_livro'
+    if lead_params[:tags] == 'vdl_proximoscursos_jul23'
       root_path(anchor: 'form')
     else
       ofuturodolivro_masterclass_path(anchor: 'workshopform')
     end
+  end
+
+  def notice_message
+    if lead_params[:tags] == 'vdl_proximoscursos_jul23'
+      'Obrigado pelo interesse!'
+    else
+      'Aproveite a masterclass!'
+    end
+
   end
 end
