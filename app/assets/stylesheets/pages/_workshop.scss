@@ -1,7 +1,7 @@
 .workshop-container{
   display: flex;
   font-family: 'NB';
-  height: 100vh;
+  min-height: 100vh;
 }
 
 // PARTE ESCURA - DETALHES
@@ -213,6 +213,14 @@
 }
 
 @media (min-width: 1400px){
+  .masterclass-paragraphe{
+    margin-top: 5rem;
+    font-size: 1.4vw;
+  }
+
+  .masterclass-subtitle{
+    font-size: 2.3vw;
+  }
   // .workshop-left .masterclass-paragraphe{
   //   font-size: 1.3rem;
   // }

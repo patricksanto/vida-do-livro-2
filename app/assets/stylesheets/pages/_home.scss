@@ -8,7 +8,7 @@
 .hero {
   color: $creme;
   background-color: black;
-  height: 100vh;
+  min-height: 100vh;
   // max-height: 100vh;
   width: 100%;
   display: flex;
@@ -37,6 +37,7 @@
   color: #EFEDDC;
   margin: 0;
   padding: 0;
+  padding-top: 4rem;
 }
 .hero-title-mobile{
   display: none;
@@ -167,7 +168,6 @@
 
 
 
-
 .video{
   background-color: $creme;
   display: flex;
@@ -183,6 +183,12 @@
   padding-top: 10px;
   padding-bottom: 56.25%;
   position: relative;
+}
+
+@media (min-width: 2500px){
+  .video-container{
+    margin: -11rem 20vw -15rem 20vw;
+  }
 }
 
 .video-container iframe{
