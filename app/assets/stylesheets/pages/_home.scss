@@ -58,6 +58,68 @@
   scale: 1.1
 }
 
+@media (max-width: 570px){
+  .hero{
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    padding: 5rem 1rem 0 1rem;
+
+  }
+
+  .hero-title-div{
+    display: none;
+  }
+
+  .hero-title-mobile{
+    display: block;
+    font-family: 'NB';
+    margin-left: .5rem;
+  }
+
+  .hero-title-mobile h1{
+    font-family: 'NB';
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .hero-title-mobile-first-line{
+    margin-bottom: 2rem;
+    max-width: 8ch;
+  }
+  .hero-title-mobile-second-line{
+    max-width: 12ch;
+  }
+  .masterclass-sobre-content{
+    width: 100% !important;
+    padding: 0 1.6vw;
+    margin-top: 0 !important;
+  }
+  .masterclass-sobre-content p {
+    font-size: .9rem !important;
+  }
+  .masterclass-sobre-content h2 {
+    font-size: 1.3rem !important;
+    margin-top: 1.6rem;
+    margin-bottom: 0;
+    line-height: .4;
+  }
+  .masterclass-sobre-content span {
+    font-size: .65rem !important;
+    margin-top: 0;
+    line-height: .5;
+  }
+  .hero-arrow-link{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
 
 
 .masterclass-sobre-content{
@@ -69,7 +131,7 @@
 
 .masterclass-sobre-content p {
   font-family: 'NB';
-  font-size: 1.2vw !important;
+  font-size: 1.2vw;
   margin-bottom: 2vw;
   line-height: 1.25;
 }
@@ -88,6 +150,10 @@
   text-transform: uppercase;
   margin-top: 2px;
 }
+
+
+
+
 
 
 
@@ -180,6 +246,55 @@
   display: none;
 }
 
+@media (max-width: 570px){
+  .video-description{
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    text-align: left;
+    grid-gap: 1rem;
+    padding: 0 1rem 1rem 1rem;
+  }
+  .video-description h2::after{
+    display: none;
+  }
+  .video-description h2::before{
+    display: none;
+  }
+  .video-description h2::after{
+    display: none;
+  }
+
+  .video-description .masterclass-john{
+    font-size: 2rem !important;
+  }
+
+  .video-description p:nth-child(2),
+  .video-description p:nth-child(3) {
+    display: none;
+  }
+  .video-description .video-description-last-paragraph{
+    display: block;
+    font-size: .9rem;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .sobre{
   background-color: #FFFC59;
@@ -223,103 +338,19 @@
   margin-bottom: 4px;
 }
 
-
-// MEDIA QUERIES
-
-// FOR
-// SMARTPHONES
-
-@media (max-width: 535px) {
-
-  // HERO
-  .hero{
-    height: auto;
-    padding-top: 5rem;
-    display: grid;
-    grid-template-columns: 5fr 6fr;
-    align-items: start;
-  }
-  .hero .hero-title{
-    display: none;
-  }
-  .hero-title-mobile{
-    display: inline-block;
-  }
-
-  .hero-title-mobile-first-line{
-    max-width: 8ch;
-    margin: 1rem 0;
-
-  }
-  .hero-title-mobile-first-line,
-  .hero-title-mobile-second-line{
-    display: inline-block;
-    font-family: 'NB';
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: left;
-    font-size: 1.25rem;
-    line-height: 1.1;
-    color: $creme;
-  }
-
-  .hero-description{
-    flex-direction: column;
-    gap: 0;
-    font-size: 1rem;
-    margin-bottom: 0px;
-  }
-
-  .hero-arrow{
-    display: none;
-  }
-  // VIDEO
-
-  .video-container{
-    // padding: 0;
-  }
-
-  .video-description{
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-    text-align: left;
-    grid-gap: 1rem;
-    padding: 0 1rem 1rem 1rem;
-  }
-  .video-description p:first-child::after{
-    display: none;
-  }
-  .video-description h2::after{
-    display: none;
-  }
-
-  .video-description .masterclass-john{
-    font-size: 2rem !important;
-  }
-
-  .video-description p:nth-child(2),
-  .video-description p:nth-child(3) {
-    display: none;
-  }
-  .video-description .video-description-last-paragraph{
-    display: block;
-  }
-
-
-
-  //
-  // SOBRE
-  //
+@media (max-width: 570px){
   .sobre{
+    display: grid;
     grid-template-columns: 1fr;
     text-align: center;
     grid-gap: 1.5rem;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
   .sobre-paragraph{
-    max-width: 33ch;
+    max-width: 40ch !important;
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto !important;
+    font-size: .6rem !important;
   }
 
   .sobre-paragraph::after{
@@ -327,8 +358,8 @@
     position: absolute;
     width: 130%;
     height: 1px;
-    background-color: $creme;
-    bottom: -2rem;
+    background-color: black;
+    bottom: -1.6rem;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -340,27 +371,156 @@
   }
   .sobre-logos p{
     grid-column: 1 / span 2;
+    font-size: .6rem !important;
+    margin: .5rem 0;
+
   }
   .sobre-logos img{
-    scale: .9;
+    scale: 3;
+    margin: 0 .5rem;
   }
   .seiva-logo{
     justify-self: end;
   }
 }
 
+// MEDIA QUERIES
+
 // FOR
-// TABLETS
+// SMARTPHONES
 
-@media (max-width: 768px) {
+// @media (max-width: 535px) {
 
-  .masterclass-john{
-    font-size: 2rem !important;
-  }
-  .video-description h2::after{
-    display: none;
-  }
-}
+//   // HERO
+//   .hero{
+//     height: auto;
+//     padding-top: 5rem;
+//     display: grid;
+//     grid-template-columns: 5fr 6fr;
+//     align-items: start;
+//   }
+//   .hero .hero-title{
+//     display: none;
+//   }
+//   .hero-title-mobile{
+//     display: inline-block;
+//   }
+
+//   .hero-title-mobile-first-line{
+//     max-width: 8ch;
+//     margin: 1rem 0;
+
+//   }
+//   .hero-title-mobile-first-line,
+//   .hero-title-mobile-second-line{
+//     display: inline-block;
+//     font-family: 'NB';
+//     font-weight: bold;
+//     text-transform: uppercase;
+//     text-align: left;
+//     font-size: 1.25rem;
+//     line-height: 1.1;
+//     color: $creme;
+//   }
+
+//   .hero-description{
+//     flex-direction: column;
+//     gap: 0;
+//     font-size: 1rem;
+//     margin-bottom: 0px;
+//   }
+
+//   .hero-arrow{
+//     display: none;
+//   }
+//   // VIDEO
+
+//   .video-container{
+//     // padding: 0;
+//   }
+
+//   .video-description{
+//     grid-template-columns: 1fr 1fr;
+//     align-items: start;
+//     text-align: left;
+//     grid-gap: 1rem;
+//     padding: 0 1rem 1rem 1rem;
+//   }
+//   .video-description p:first-child::after{
+//     display: none;
+//   }
+//   .video-description h2::after{
+//     display: none;
+//   }
+
+//   .video-description .masterclass-john{
+//     font-size: 2rem !important;
+//   }
+
+//   .video-description p:nth-child(2),
+//   .video-description p:nth-child(3) {
+//     display: none;
+//   }
+//   .video-description .video-description-last-paragraph{
+//     display: block;
+//   }
+
+
+
+//   //
+//   // SOBRE
+//   //
+//   .sobre{
+//     grid-template-columns: 1fr;
+//     text-align: center;
+//     grid-gap: 1.5rem;
+//     padding: 2rem 1rem;
+//   }
+//   .sobre-paragraph{
+//     max-width: 33ch;
+//     position: relative;
+//     margin: 0 auto;
+//   }
+
+//   .sobre-paragraph::after{
+//     content: '';
+//     position: absolute;
+//     width: 130%;
+//     height: 1px;
+//     background-color: $creme;
+//     bottom: -2rem;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+
+//   .sobre-logos{
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     margin-top: 1.5rem;
+//   }
+//   .sobre-logos p{
+//     grid-column: 1 / span 2;
+//   }
+//   .sobre-logos img{
+//     scale: .9;
+//   }
+//   .seiva-logo{
+//     justify-self: end;
+//   }
+// }
+
+// // FOR
+// // TABLETS
+
+// @media (max-width: 768px) {
+
+//   .masterclass-john{
+//     font-size: 2rem !important;
+//   }
+//   .video-description h2::after{
+//     display: none;
+//   }
+// }
 
 
 
