@@ -112,7 +112,7 @@
 
 .main-areas-highlight{
   font-size: 1.3rem !important;
-  letter-spacing: 1px !important;
+  // letter-spacing: 1px !important;
   line-height: 1.2 !important;
   font-weight: bold;
   margin-bottom: 1.5rem !important;
@@ -141,6 +141,8 @@
   }
   .main-areas-content .main-areas-highlight{
     font-size: .8rem !important;
+    font-weight: normal;
+    font-family: 'NB';
   }
   .main-areas-sticker-regular{
     display: none;
