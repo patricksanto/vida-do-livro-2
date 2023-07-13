@@ -238,6 +238,16 @@
       max-width: 100% !important;
       // scale: 1.3;
     }
+
+  }
+
+  .main-proxima-turma input{
+    font-size: .6rem;
+    padding: .5rem 1rem;
+  }
+  .workshop-form-submit{
+    font-size: .6rem !important;
+    padding: .5rem !important;
   }
 
   .main-proxima-turma-title-responsivo{
@@ -307,7 +317,7 @@
 
 @media (max-width: 768px){
   .main-encontros{
-    padding: .6rem;
+    padding: .8rem;
   }
   .main-encontros-title{
     display: flex;
@@ -337,11 +347,51 @@
       display: none;
     }
   }
-  .encontro-head h2{
-    font-size: 1.2rem
+  .main-encontros .encontro:nth-child(odd) h3{
+    text-align: right;
   }
+  .encontro-head{
+    margin-bottom: 0 !important;
+    position: relative;
+  }
+  .encontro-head .encontro-sticker{
+    position: absolute;
+    width: 25%;
+    display: block !important;
+    top: -1.5rem;
+  }
+  .last{
+    width: 20% !important;
+  }
+  .main-encontros .encontro:nth-child(odd) .encontro-head .encontro-sticker{
+    left: 1rem;
+  }
+  .main-encontros .encontro:nth-child(even) .encontro-head .encontro-sticker{
+    right: 1rem;
+  }
+
+  .encontro-head h2{
+    font-size: 1.2rem;
+    margin-bottom: 10px !important;
+  }
+  .encontro-head{
+    width: 100% !important;
+  }
+  .right{
+    justify-content: flex-end !important;
+  }
+
+
   .encontro h3 {
-    font-size: 1rem;
+    font-size: .65rem;
+    line-height: .7;
+    margin: 0;
+  }
+  .encontro p {
+    font-size: .8rem;
+    margin-bottom: 2rem;
+
+
   }
 }
 
@@ -356,6 +406,9 @@
 
   h2{
     margin: 0;
+  }
+  .encontro-sticker{
+    display: none;
   }
 }
 .main-encontros .encontro .encontro-data{
