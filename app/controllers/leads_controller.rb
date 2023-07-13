@@ -22,6 +22,8 @@ class LeadsController < ApplicationController
     @lead.tags << lead_params[:tags]
     @lead.save!
 
+    token = refresh_token
+
     url = URI('https://api.rd.services/platform/contacts')
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = true
@@ -29,23 +31,29 @@ class LeadsController < ApplicationController
     request = Net::HTTP::Post.new(url)
     request['Accept'] = 'application/json'
     request['Content-Type'] = 'application/json'
-    request['Authorization'] = "Bearer #{refresh_token}"
-    request.body = { name: @lead.name, email: @lead.email, tags: @lead.tags }.to_json
+    request['Authorization'] = "Bearer #{token}"
+    if @lead.cellphone_number.present?
+      request.body = { name: @lead.name, email: @lead.email, tags: @lead.tags, mobile_phone: @lead.cellphone_number }.to_json
+    else
+      request.body = { name: @lead.name, email: @lead.email, tags: @lead.tags }.to_json
+    end
 
     response = http.request(request)
+    puts response.read_body
 
     if response.is_a?(Net::HTTPSuccess)
       flash[:notice] = notice_message
       redirect_to redirect_path
     elsif response.is_a?(Net::HTTPClientError) && JSON.parse(response.body)["errors"]["error_type"] == "EMAIL_ALREADY_IN_USE"
-      handle_existing_lead
+      handle_existing_lead(token)
     else
       render :new, status: :unprocessable_entity
     end
   end
 
-  def handle_existing_lead
+  def handle_existing_lead(tkn)
     encoded_email = URI.encode_www_form_component(@lead.email)
+
     url = URI("https://api.rd.services/platform/contacts/email:#{encoded_email}/tag")
 
     http = Net::HTTP.new(url.host, url.port)
@@ -54,10 +62,25 @@ class LeadsController < ApplicationController
     request = Net::HTTP::Post.new(url)
     request["accept"] = 'application/json'
     request["content-type"] = 'application/json'
-    request['Authorization'] = "Bearer #{refresh_token}"
-    request.body = "{\"tags\":[\"#{@lead.tags.last}\"]}"
-
+    request['Authorization'] = "Bearer #{tkn}"
+    request.body = { tags: @lead.tags.last }.to_json
+    # request.body = "{\"tags\":[\"#{@lead.tags.last}\"]}"
     response = http.request(request)
+    puts response.read_body
+
+    # phone_url = URI("https://api.rd.services/platform/contacts/email:#{encoded_email}")
+    # phone_http = Net::HTTP.new(phone_url.host, phone_url.port)
+    # phone_http.use_ssl = true
+
+    # phone_request = Net::HTTP::Get.new(phone_url)
+    # phone_request["accept"] = 'application/json'
+    # phone_request["content-type"] = 'application/json'
+    # phone_request['Authorization'] = "Bearer #{tkn}"
+    # phone_request.body = { phone_number: @lead.cellphone_number }.to_json
+
+    # phone_response = phone_http.request(phone_request)
+    # puts phone_response.read_body
+
 
     if response.is_a?(Net::HTTPSuccess)
       flash[:notice] = notice_message
