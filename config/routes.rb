@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  root to: "pages#main"
+
   get 'leads/new'
   get 'leads/create'
 
   devise_for :users
-  root to: "pages#main"
   get '/ofuturodolivro_masterclass', to: 'pages#home'
 
   # get '/workshop', to: 'pages#workshop'
