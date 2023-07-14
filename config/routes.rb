@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get '/ofuturodolivro', to: 'leads#new'
   get '/futurodolivro', to: 'leads#new'
 
+  match '*path', to: redirect('/'), via: :all
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
