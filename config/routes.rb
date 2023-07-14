@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :leads, only: [:create]
   get '/ofuturodolivro', to: 'leads#new'
+  get '/futurodolivro', to: 'leads#new'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
