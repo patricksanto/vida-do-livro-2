@@ -39,13 +39,13 @@ class LeadsController < ApplicationController
                          payload: {
                            name: @lead.name, email: @lead.email,
                            tags: @lead.tags, mobile_phone: @lead.cellphone_number,
-                           conversion_identifier: "ofuturodolivro_masterclass"
+                           conversion_identifier: @lead.tags.last
                                   } }.to_json
       else
         request.body = { event_type: "CONVERSION", event_family: "CDP",
                          payload: {
                            name: @lead.name, email: @lead.email, tags: @lead.tags,
-                           conversion_identifier: "ofuturodolivro_masterclass"
+                           conversion_identifier: @lead.tags.last
                                   } }.to_json
       end
 
