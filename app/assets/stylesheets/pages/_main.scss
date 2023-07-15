@@ -141,7 +141,7 @@
   }
   .main-areas-content .main-areas-highlight{
     font-size: .8rem !important;
-    font-weight: normal;
+    font-weight: bold;
     font-family: 'NB';
   }
   .main-areas-sticker-regular{
@@ -287,6 +287,7 @@
   p{
     text-align: left;
     font-family: 'Nb';
+    font-size: 1.1rem;
   }
 }
 
@@ -663,6 +664,7 @@
   }
   .main-sobre-dani p {
     font-size: .8rem !important;
+    text-align: center !important;
 
   }
   .main-sobre-dani img{
@@ -807,6 +809,10 @@
     p{
       font-size: .7rem;
     }
+  }
+
+  .duvida div img{
+    max-width: 12px;
   }
 }
 

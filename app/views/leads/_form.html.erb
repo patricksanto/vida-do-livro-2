@@ -2,12 +2,12 @@
 
   <%= form.text_field :name, placeholder: 'Nome' %>
     <% @lead.errors.full_messages_for(:name).each do |message| %>
-      <div><%= message %></div>
+      <div class="form-error-message"><%= message %></div>
     <% end %>
 
   <%= form.text_field :email, placeholder: 'Email' %>
     <% @lead.errors.full_messages_for(:email).each do |message| %>
-      <div><%= message %></div>
+      <div class="form-error-message"><%= message %></div>
     <% end %>
 
   <%= form.hidden_field :tags, value: 'videoaula_johnbthompson_jun23' %>

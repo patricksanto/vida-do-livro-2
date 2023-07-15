@@ -106,6 +106,7 @@
 .workshop-right form{
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .workshop-right input{
   border-radius: 20px;
@@ -117,8 +118,19 @@
   margin-bottom: .5rem;
   flex-grow: 1;
 }
+.workshop-right .fields-with-errors{
+  border-radius: 20px;
+  border: 1px solid red;
+  background-color: transparent;
+  padding: .7rem 1.5rem;
+  font-size: 1vw;
+  font-family: 'NB';
+  margin-bottom: .5rem;
+  flex-grow: 1 !important;
+  width: 100% !important;
+}
 
-.workshop-right input:nth-child(5){
+.workshop-right .workshop-form-submit{
   padding: 1rem 1.5rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -127,6 +139,16 @@
   font-family: 'NB';
   font-size: 1rem;
   border-radius: 20px;
+}
+
+.form-error-messages{
+  font-family: 'NB';
+  font-size: .5rem !important;
+  color: red;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-align: center;
+  max-width: 20ch;
 }
 
 .workshop-right img{
@@ -232,6 +254,7 @@
     align-self: center;
     margin-top: 1rem;
   }
+
 }
 
 @media (min-width: 1400px){

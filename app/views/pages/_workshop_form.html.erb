@@ -7,7 +7,14 @@
 <%= form_with(model: @lead, url: leads_path, local: true) do |form| %>
 
   <%= form.text_field :name, placeholder: 'Nome' %>
+  <% @lead.errors.full_messages_for(:name).each do |message| %>
+    <div class="form-error-messages"><%= message %></div>
+  <% end %>
+
   <%= form.text_field :email, placeholder: 'Email' %>
+  <% @lead.errors.full_messages_for(:email).each do |message| %>
+    <div class="form-error-messages"><%= message %></div>
+  <% end %>
   <%= form.submit 'ASSISTIR AGORA' %>
 
 <% end %>
