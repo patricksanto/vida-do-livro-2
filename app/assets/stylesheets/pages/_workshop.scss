@@ -22,6 +22,19 @@
   }
 }
 
+.workshop-left .masterclass-head span{
+  font-family: 'NBpro';
+  font-weight: bold;
+  font-size: 2VW;
+  color: black;
+  padding: .3rem .8rem;
+  background-color: #FFFC59;
+  display: inline-block;
+  flex: 1;
+  margin-left: -.8rem;
+  margin-top: 1rem;
+}
+
 .vida-do-livro-apresenta{
   max-width: 80%;
 }
@@ -59,7 +72,7 @@
   max-width: 35ch;
   font-family: 'NB';
   font-size: 1.8vw;
-  color: $green;
+  color: $creme;
   line-height: 1.1;
   margin-top: 1rem;
 }
@@ -144,23 +157,32 @@
     margin-bottom: .5rem;
   }
   .masterclass-head{
-    max-width: 80%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    img{
+      width: 60%;
+    }
+  }
+  .workshop-left .masterclass-head span{
+    font-size: 1rem;
+    padding: .2rem .5rem;
   }
   .masterclass-title{
     font-size: 4rem;
     margin-bottom: .4rem;
   }
   .masterclass-subtitle{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     // max-width: 80%;
   }
   .masterclass-paragraphe{
     max-width: 100%;
-    font-size: 1.2rem;
+    font-size: .9rem;
+    max-width: 34ch;
   }
 
 

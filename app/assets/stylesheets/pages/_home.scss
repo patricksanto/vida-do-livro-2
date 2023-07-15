@@ -14,7 +14,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: end;
+  // justify-content: end;
   padding-bottom: 1rem;
 }
 .hero-title-div{
@@ -93,60 +93,41 @@
 
 @media (max-width: 570px){
   .hero{
-    display: grid;
-    grid-template-columns: 4fr 5fr;
-    padding: 5rem .5rem 2rem 1rem;
+    padding: 2rem .4rem 1rem .4rem;
     height: auto !important;
-    min-height: 100vh;
     gap: .5rem;
+    min-height: auto !important;
+  }
+  .hero-title-div{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
-  .hero-title-div{
+  .hero-title{
+    padding-top: 1rem;
+    font-size: 1.5rem !important;
+  }
+
+  .masterclass-sobre-content{
+    padding: 1rem 1rem;
+    margin-top: 1rem !important;
+  }
+
+  .masterclass-sobre-content h2 {
     display: none;
   }
 
-  .hero-title-mobile{
-    display: block;
-    font-family: 'NB';
-    // margin-left: .5rem;
-  }
-
-  .hero-title-mobile h1{
-    font-family: 'NB';
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    font-weight: bold;
-  }
-  .hero-title-mobile-first-line{
-    margin-bottom: 2rem;
-    max-width: 8ch;
-  }
-  .hero-title-mobile-second-line{
-    max-width: 12ch;
-  }
-  .masterclass-sobre-content{
-    padding: 0 1.6vw;
-    margin-top: 0 !important;
-  }
   .masterclass-sobre-content p {
-    max-width: 30ch !important;
-    font-size: .85rem !important;
+    max-width: 24ch !important;
+    font-size: .7rem !important;
     margin-bottom: .5rem;
   }
-  .masterclass-sobre-content h2 {
-    font-size: .85rem !important;
-    margin-top: 1.6rem;
-    margin-bottom: 0;
-    line-height: .4;
-  }
-  .masterclass-sobre-content span {
-    font-size: .65rem !important;
-    margin-top: 0;
-    line-height: .5;
-  }
-  .hero-arrow-link{
-    display: none;
-  }
+
+
 }
 
 
@@ -272,7 +253,7 @@
     align-items: start;
     text-align: left;
     grid-gap: 1rem;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 .5rem 1rem .5rem;
   }
   // .video-description h2::after{
   //   display: none;
@@ -285,7 +266,13 @@
   // }
 
   .video-description .masterclass-john{
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
+
+  }
+  .video-description p {
+    font-size: .7rem !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
   }
 
   .video-description p:nth-child(2),
@@ -299,6 +286,7 @@
 
 
 }
+
 
 
 
