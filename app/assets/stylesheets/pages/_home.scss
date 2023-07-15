@@ -22,46 +22,48 @@
   // padding: 3vw;
   display: flex;
   justify-content: center;
-  margin-top: 8rem;
-
+  margin-top: 4rem;
+  margin-bottom: 0;
 }
 .hero-title{
   font-family: 'NB';
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  font-size: 3.89vw !important;
+  font-size: 4.7vw !important;
   // padding-top: 22rem;
   line-height: 1.1;
   letter-spacing: .1vw;
   color: #EFEDDC;
   margin: 0;
   padding: 0;
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 .hero-title-mobile{
   display: none;
 }
 
 .masterclass-sobre-content{
-  justify-items: flex-start;
-  padding: 0 3vw;
+  padding: 2vw 3vw ;
   margin-top: 2rem;
 }
 
 .masterclass-sobre-content p {
   font-family: 'NB';
-  font-size: 1.1vw;
-  margin-bottom: 1.3vw;
+  font-size: 1.5vw;
+  margin-bottom: 2rem;
   line-height: 1.2;
-  max-width: 52ch;
+  max-width: 45ch;
 }
 
 .masterclass-sobre-content h2{
-  font-family: 'NB';
-  font-size: 1.1vw;
-  margin-bottom: 0;
+  font-family: 'NBpro';
+  font-weight: bold;
+  font-size: 4.2vw;
+  margin-bottom: 2.5rem;
   padding-bottom: 0;
+  max-width: 14ch;
+  line-height: .9;
 }
 
 .masterclass-sobre-content span {
@@ -171,9 +173,10 @@
 .video{
   background-color: $creme;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   margin: 0 auto;
+  // min-height: 100vh;
   // padding: 0 1rem;
 }
 
@@ -201,7 +204,7 @@
 }
 
 .video-description{
-  color: $black;
+  color: $creme;
   display: grid;
   width: 100%;
   grid-gap: 1.5rem;
