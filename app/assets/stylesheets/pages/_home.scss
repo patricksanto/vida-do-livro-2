@@ -14,7 +14,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: end;
+  // justify-content: end;
   padding-bottom: 1rem;
 }
 .hero-title-div{
@@ -22,46 +22,48 @@
   // padding: 3vw;
   display: flex;
   justify-content: center;
-  margin-top: 8rem;
-
+  margin-top: 4rem;
+  margin-bottom: 0;
 }
 .hero-title{
   font-family: 'NB';
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  font-size: 3.89vw !important;
+  font-size: 4.7vw !important;
   // padding-top: 22rem;
   line-height: 1.1;
   letter-spacing: .1vw;
   color: #EFEDDC;
   margin: 0;
   padding: 0;
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 .hero-title-mobile{
   display: none;
 }
 
 .masterclass-sobre-content{
-  justify-items: flex-start;
-  padding: 0 3vw;
+  padding: 2vw 3vw ;
   margin-top: 2rem;
 }
 
 .masterclass-sobre-content p {
   font-family: 'NB';
-  font-size: 1.1vw;
-  margin-bottom: 1.3vw;
+  font-size: 1.5vw;
+  margin-bottom: 2rem;
   line-height: 1.2;
-  max-width: 52ch;
+  max-width: 45ch;
 }
 
 .masterclass-sobre-content h2{
-  font-family: 'NB';
-  font-size: 1.1vw;
-  margin-bottom: 0;
+  font-family: 'NBpro';
+  font-weight: bold;
+  font-size: 4.2vw;
+  margin-bottom: 2.5rem;
   padding-bottom: 0;
+  max-width: 14ch;
+  line-height: .9;
 }
 
 .masterclass-sobre-content span {
@@ -91,60 +93,41 @@
 
 @media (max-width: 570px){
   .hero{
-    display: grid;
-    grid-template-columns: 4fr 5fr;
-    padding: 5rem .5rem 2rem 1rem;
+    padding: 2rem .4rem 1rem .4rem;
     height: auto !important;
-    min-height: 100vh;
     gap: .5rem;
+    min-height: auto !important;
+  }
+  .hero-title-div{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
-  .hero-title-div{
+  .hero-title{
+    padding-top: 1rem;
+    font-size: 1.5rem !important;
+  }
+
+  .masterclass-sobre-content{
+    padding: 1rem 1rem;
+    margin-top: 1rem !important;
+  }
+
+  .masterclass-sobre-content h2 {
     display: none;
   }
 
-  .hero-title-mobile{
-    display: block;
-    font-family: 'NB';
-    // margin-left: .5rem;
-  }
-
-  .hero-title-mobile h1{
-    font-family: 'NB';
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    font-weight: bold;
-  }
-  .hero-title-mobile-first-line{
-    margin-bottom: 2rem;
-    max-width: 8ch;
-  }
-  .hero-title-mobile-second-line{
-    max-width: 12ch;
-  }
-  .masterclass-sobre-content{
-    padding: 0 1.6vw;
-    margin-top: 0 !important;
-  }
   .masterclass-sobre-content p {
-    max-width: 30ch !important;
-    font-size: .85rem !important;
+    max-width: 24ch !important;
+    font-size: .7rem !important;
     margin-bottom: .5rem;
   }
-  .masterclass-sobre-content h2 {
-    font-size: .85rem !important;
-    margin-top: 1.6rem;
-    margin-bottom: 0;
-    line-height: .4;
-  }
-  .masterclass-sobre-content span {
-    font-size: .65rem !important;
-    margin-top: 0;
-    line-height: .5;
-  }
-  .hero-arrow-link{
-    display: none;
-  }
+
+
 }
 
 
@@ -171,9 +154,10 @@
 .video{
   background-color: $creme;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   margin: 0 auto;
+  // min-height: 100vh;
   // padding: 0 1rem;
 }
 
@@ -201,7 +185,7 @@
 }
 
 .video-description{
-  color: $black;
+  color: $creme;
   display: grid;
   width: 100%;
   grid-gap: 1.5rem;
@@ -269,7 +253,7 @@
     align-items: start;
     text-align: left;
     grid-gap: 1rem;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 .5rem 1rem .5rem;
   }
   // .video-description h2::after{
   //   display: none;
@@ -282,7 +266,13 @@
   // }
 
   .video-description .masterclass-john{
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
+
+  }
+  .video-description p {
+    font-size: .7rem !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
   }
 
   .video-description p:nth-child(2),
@@ -296,6 +286,7 @@
 
 
 }
+
 
 
 
