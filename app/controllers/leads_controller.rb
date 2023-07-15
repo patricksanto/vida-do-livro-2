@@ -24,7 +24,9 @@ class LeadsController < ApplicationController
     if @lead.save
       token = refresh_token
 
-      url = URI('https://api.rd.services/platform/contacts')
+      # url = URI('https://api.rd.services/platform/contacts')
+      url = URI("https://api.rd.services/platform/events?event_type=conversion")
+
       http = Net::HTTP.new(url.host, url.port)
       http.use_ssl = true
 
@@ -33,13 +35,22 @@ class LeadsController < ApplicationController
       request['Content-Type'] = 'application/json'
       request['Authorization'] = "Bearer #{token}"
       if @lead.cellphone_number.present?
-        request.body = { name: @lead.name, email: @lead.email, tags: @lead.tags, mobile_phone: @lead.cellphone_number }.to_json
+        request.body = { event_type: "CONVERSION", event_family: "CDP",
+                         payload: {
+                           name: @lead.name, email: @lead.email,
+                           tags: @lead.tags, mobile_phone: @lead.cellphone_number,
+                           conversion_identifier: "ofuturodolivro_masterclass"
+                                  } }.to_json
       else
-        request.body = { name: @lead.name, email: @lead.email, tags: @lead.tags }.to_json
+        request.body = { event_type: "CONVERSION", event_family: "CDP",
+                         payload: {
+                           name: @lead.name, email: @lead.email, tags: @lead.tags,
+                           conversion_identifier: "ofuturodolivro_masterclass"
+                                  } }.to_json
       end
 
       response = http.request(request)
-      puts response.read_body
+      puts JSON.parse(response.body)
 
       if response.is_a?(Net::HTTPSuccess)
         flash[:notice] = notice_message
