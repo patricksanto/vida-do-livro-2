@@ -20,35 +20,51 @@ class LeadsController < ApplicationController
     @lead = Lead.find_or_initialize_by(email: lead_params[:email])
     @lead.assign_attributes(lead_params)
     @lead.tags << lead_params[:tags]
-    @lead.save!
 
-    token = refresh_token
+    if @lead.save
+      token = refresh_token
 
-    url = URI('https://api.rd.services/platform/contacts')
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = true
+      # url = URI('https://api.rd.services/platform/contacts')
+      url = URI("https://api.rd.services/platform/events?event_type=conversion")
 
-    request = Net::HTTP::Post.new(url)
-    request['Accept'] = 'application/json'
-    request['Content-Type'] = 'application/json'
-    request['Authorization'] = "Bearer #{token}"
-    if @lead.cellphone_number.present?
-      request.body = { name: @lead.name, email: @lead.email, tags: @lead.tags, mobile_phone: @lead.cellphone_number }.to_json
-    else
-      request.body = { name: @lead.name, email: @lead.email, tags: @lead.tags }.to_json
-    end
+      http = Net::HTTP.new(url.host, url.port)
+      http.use_ssl = true
 
-    response = http.request(request)
-    puts response.read_body
+      request = Net::HTTP::Post.new(url)
+      request['Accept'] = 'application/json'
+      request['Content-Type'] = 'application/json'
+      request['Authorization'] = "Bearer #{token}"
+      if @lead.cellphone_number.present?
+        request.body = { event_type: "CONVERSION", event_family: "CDP",
+                         payload: {
+                           name: @lead.name, email: @lead.email,
+                           tags: @lead.tags, mobile_phone: @lead.cellphone_number,
+                           conversion_identifier: "ofuturodolivro_masterclass"
+                                  } }.to_json
+      else
+        request.body = { event_type: "CONVERSION", event_family: "CDP",
+                         payload: {
+                           name: @lead.name, email: @lead.email, tags: @lead.tags,
+                           conversion_identifier: "ofuturodolivro_masterclass"
+                                  } }.to_json
+      end
 
-    if response.is_a?(Net::HTTPSuccess)
-      flash[:notice] = notice_message
-      redirect_to redirect_path
-    elsif response.is_a?(Net::HTTPClientError) && JSON.parse(response.body)["errors"]["error_type"] == "EMAIL_ALREADY_IN_USE"
-      handle_existing_lead(token)
+      response = http.request(request)
+      puts JSON.parse(response.body)
+
+      if response.is_a?(Net::HTTPSuccess)
+        flash[:notice] = notice_message
+        redirect_to redirect_path
+      elsif response.is_a?(Net::HTTPClientError) && JSON.parse(response.body)["errors"]["error_type"] == "EMAIL_ALREADY_IN_USE"
+        handle_existing_lead(token)
+      else
+        render :new, status: :unprocessable_entity
+      end
+
     else
       render :new, status: :unprocessable_entity
     end
+
   end
 
   def handle_existing_lead(tkn)
@@ -121,7 +137,7 @@ class LeadsController < ApplicationController
     if lead_params[:tags] == 'vdl_proximoscursos_jul23'
       'Obrigado pelo interesse!'
     else
-      'Aproveite a masterclass!'
+      'Aproveite a masterclass! Você também receberá a aula em seu email.'
     end
 
   end
