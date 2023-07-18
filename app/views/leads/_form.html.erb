@@ -1,17 +1,17 @@
 <%= form_with model: @lead do |form| %>
 
-  <%= form.text_field :name, placeholder: 'Nome' %>
-    <% @lead.errors.full_messages_for(:name).each do |message| %>
-      <div class="form-error-message"><%= message %></div>
-    <% end %>
+  <%= form.text_field :name, placeholder: 'Nome', class: (@lead.errors.has_key?(:name) ? 'fields-with-errors' : '') %>
+  <%= form.text_field :email, placeholder: 'Email', class: (@lead.errors.has_key?(:email) ? 'fields-with-errors' : '') %>
 
-  <%= form.text_field :email, placeholder: 'Email' %>
-    <% @lead.errors.full_messages_for(:email).each do |message| %>
-      <div class="form-error-message"><%= message %></div>
-    <% end %>
 
   <%= form.hidden_field :tags, value: 'videoaula_johnbthompson_jun23' %>
 
   <%= form.submit 'ASSISTIR AGORA', class:'workshop-form-submit' %>
+  <% @lead.errors.full_messages_for(:name).each do |message| %>
+      <div class="form-error-message"><%= message %></div>
+  <% end %>
+  <% @lead.errors.full_messages_for(:email).each do |message| %>
+      <div class="form-error-message"><%= message %></div>
+  <% end %>
 
 <% end %>

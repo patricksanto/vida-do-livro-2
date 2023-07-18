@@ -129,7 +129,7 @@
   border: 1px solid red;
   background-color: transparent;
   padding: .7rem 1.5rem;
-  font-size: 1vw;
+  font-size: 1.2vw;
   font-family: 'NB';
   margin-bottom: .5rem;
   flex-grow: 1 !important;
@@ -147,14 +147,13 @@
   border-radius: 20px;
 }
 
-.form-error-messages{
+.form-error-message{
   font-family: 'NB';
-  font-size: .5rem !important;
+  font-size: 1vw;
   color: red;
-  margin-top: 1rem;
+  // margin-top: 1rem;
   margin-bottom: 0;
   text-align: center;
-  max-width: 20ch;
 }
 
 .workshop-right img{
@@ -238,6 +237,12 @@
     grid-template-columns: 3fr 1fr;
     padding: 1rem;
   }
+
+  .form-error-message{
+    font-size: .7rem;
+    grid-column: 1 / span 1;
+  }
+
   .workshop-signup form #lead_name,
   .workshop-signup form #lead_email{
     grid-column: 1 / span 1;
