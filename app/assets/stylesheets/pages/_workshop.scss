@@ -27,7 +27,7 @@
   font-weight: bold;
   font-size: 2VW;
   color: black;
-  padding: .3rem .8rem;
+  padding: .4rem .8rem .3rem .8rem;
   background-color: #FFFC59;
   display: inline-block;
   flex: 1;
@@ -35,6 +35,12 @@
   margin-top: 1rem;
 }
 
+.masterclass-headline{
+  font-family: 'CheltenhamBT';
+  font-weight: bold;
+  font-size: 2.5vw;
+
+}
 .vida-do-livro-apresenta{
   max-width: 80%;
 }
@@ -99,7 +105,7 @@
   text-align: center;
   font-family: 'NB';
   font-size: 2vw;
-  max-width: 15ch;
+  max-width: 18ch;
   align-self: center;
   margin-bottom: 1rem;
 }
@@ -113,7 +119,7 @@
   border: 1px solid black;
   background-color: transparent;
   padding: .7rem 1.5rem;
-  font-size: 1vw;
+  font-size: 1.2vw;
   font-family: 'NB';
   margin-bottom: .5rem;
   flex-grow: 1;
@@ -137,7 +143,7 @@
   background-color: black;
   color: white;
   font-family: 'NB';
-  font-size: 1rem;
+  font-size: 1.2vw;
   border-radius: 20px;
 }
 

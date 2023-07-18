@@ -752,6 +752,10 @@
     padding: 1rem 0;
   }
 
+  .duvida{
+    margin-bottom: 1.5rem;
+  }
+
   .duvida div{
     display: flex;
     justify-content: start;
@@ -769,10 +773,12 @@
   }
 }
 
+
 .duvida div img{
   max-width: 20px;
   margin-right: .5rem;
   margin-bottom: .5rem;
+  display: inline;
 }
 
 .duvida div h2{
@@ -781,6 +787,7 @@
   font-weight: bold;
   line-height: .9;
   margin-top: .5rem;
+  display: inline;
 }
 
 
@@ -811,8 +818,15 @@
     }
   }
 
+  .duvida{
+    margin-bottom: 1rem !important;
+  }
+  .duvida div{
+    margin-bottom: .2rem;
+  }
   .duvida div img{
-    max-width: 12px;
+    max-width: 16px;
+    margin-bottom: .2rem;
   }
 }
 
