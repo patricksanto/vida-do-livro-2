@@ -8,7 +8,7 @@
 .hero {
   color: $creme;
   background-color: black;
-  min-height: 100vh;
+  // min-height: 100vh;
   // max-height: 100vh;
   width: 100%;
   display: flex;
@@ -163,9 +163,8 @@
 }
 
 .video-container{
-  margin: -2rem 11vw -3rem 11vw;
+  margin: -2rem 15vw -3rem 15vw;
   height: 0;
-  padding-top: 10px;
   padding-bottom: 56.25%;
   position: relative;
 }
