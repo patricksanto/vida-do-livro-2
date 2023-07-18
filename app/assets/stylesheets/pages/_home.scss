@@ -37,7 +37,7 @@
   color: #EFEDDC;
   margin: 0;
   padding: 0;
-  padding-top: 3rem;
+  padding-top: 4rem;
 }
 .hero-title-mobile{
   display: none;
@@ -50,7 +50,7 @@
 
 .masterclass-sobre-content p {
   font-family: 'NB';
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   margin-bottom: 2rem;
   line-height: 1.2;
   max-width: 45ch;
@@ -59,10 +59,10 @@
 .masterclass-sobre-content h2{
   font-family: 'NBpro';
   font-weight: bold;
-  font-size: 4.2vw;
+  font-size: 4vw;
   margin-bottom: 2.5rem;
   padding-bottom: 0;
-  max-width: 14ch;
+  max-width: 15ch;
   line-height: .9;
 }
 
@@ -118,7 +118,8 @@
   }
 
   .masterclass-sobre-content h2 {
-    display: none;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .masterclass-sobre-content p {

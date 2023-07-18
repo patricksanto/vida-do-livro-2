@@ -27,7 +27,7 @@
   font-weight: bold;
   font-size: 2VW;
   color: black;
-  padding: .3rem .8rem;
+  padding: .4rem .8rem .3rem .8rem;
   background-color: #FFFC59;
   display: inline-block;
   flex: 1;
@@ -35,6 +35,12 @@
   margin-top: 1rem;
 }
 
+.masterclass-headline{
+  font-family: 'CheltenhamBT';
+  font-weight: bold;
+  font-size: 2.5vw;
+
+}
 .vida-do-livro-apresenta{
   max-width: 80%;
 }
@@ -99,7 +105,7 @@
   text-align: center;
   font-family: 'NB';
   font-size: 2vw;
-  max-width: 15ch;
+  max-width: 18ch;
   align-self: center;
   margin-bottom: 1rem;
 }
@@ -113,7 +119,7 @@
   border: 1px solid black;
   background-color: transparent;
   padding: .7rem 1.5rem;
-  font-size: 1vw;
+  font-size: 1.2vw;
   font-family: 'NB';
   margin-bottom: .5rem;
   flex-grow: 1;
@@ -123,7 +129,7 @@
   border: 1px solid red;
   background-color: transparent;
   padding: .7rem 1.5rem;
-  font-size: 1vw;
+  font-size: 1.2vw;
   font-family: 'NB';
   margin-bottom: .5rem;
   flex-grow: 1 !important;
@@ -137,18 +143,17 @@
   background-color: black;
   color: white;
   font-family: 'NB';
-  font-size: 1rem;
+  font-size: 1.2vw;
   border-radius: 20px;
 }
 
-.form-error-messages{
+.form-error-message{
   font-family: 'NB';
-  font-size: .5rem !important;
+  font-size: 1vw;
   color: red;
-  margin-top: 1rem;
+  // margin-top: 1rem;
   margin-bottom: 0;
   text-align: center;
-  max-width: 20ch;
 }
 
 .workshop-right img{
@@ -232,6 +237,12 @@
     grid-template-columns: 3fr 1fr;
     padding: 1rem;
   }
+
+  .form-error-message{
+    font-size: .7rem;
+    grid-column: 1 / span 1;
+  }
+
   .workshop-signup form #lead_name,
   .workshop-signup form #lead_email{
     grid-column: 1 / span 1;
