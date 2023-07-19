@@ -4,6 +4,9 @@ class LeadsController < ApplicationController
   def new
     @lead = Lead.new
     @hide_navbar = true
+    @page_title = 'O Futuro do Livro'
+    @page_description = 'Masterclass com John B. Thompson | Vida do Livro'
+    @page_keywords = 'Vida do livro, mercado editorial, John B. Thompson, Livros digitais'
   end
 
   def waiting_list

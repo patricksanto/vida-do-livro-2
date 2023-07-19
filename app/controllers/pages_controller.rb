@@ -2,15 +2,24 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :workshop, :submit, :main]
 
   def home
+    @page_title = 'Vida do Livro'
+    @page_description = 'Vida do Livro | Um curso para entender o mercado editorial'
+    @page_keywords = 'Vida do livro, mercado editorial, livros digitais, Daniel Lameira'
   end
 
   def workshop
     @hide_navbar = true
     @lead = Lead.new
+    @page_title = 'Vida do Livro'
+    @page_description = 'Vida do Livro | Um curso para entender o mercado editorial'
+    @page_keywords = 'Vida do livro, mercado editorial, livros digitais, Daniel Lameira'
   end
 
   def main
     @lead = Lead.new
+    @page_title = 'Vida do Livro'
+    @page_description = 'Vida do Livro | Um curso para entender o mercado editorial'
+    @page_keywords = 'Vida do livro, mercado editorial, livros digitais, Daniel Lameira'
   end
 
   def submit
