@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
+
+import PhoneMaskController from "./phone_mask_controller"
+application.register("phone-mask", PhoneMaskController)

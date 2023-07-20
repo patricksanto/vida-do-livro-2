@@ -2,6 +2,7 @@
 
   <%= form.text_field :name, placeholder: 'Nome', class: (@lead.errors.has_key?(:name) ? 'fields-with-errors' : '') %>
   <%= form.text_field :email, placeholder: 'Email', class: (@lead.errors.has_key?(:email) ? 'fields-with-errors' : '') %>
+  <%= form.text_field :cellphone_number, id: 'phone_field_id',data: { controller: 'phone-mask' }, placeholder: 'Telefone', class: (@lead.errors.has_key?(:cellphone_number) ? 'fields-with-errors' : '') %>
 
 
   <%= form.hidden_field :tags, value: 'videoaula_johnbthompson_jun23' %>
