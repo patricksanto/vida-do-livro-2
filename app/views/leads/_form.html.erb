@@ -14,8 +14,8 @@
   <% @lead.errors.full_messages_for(:email).each do |message| %>
       <div class="form-error-message"><%= message %></div>
   <% end %>
-  <% @lead.errors.full_messages_for(:cellphone_number).each do |message| %>
-      <div class="form-error-message"><%= message %></div>
-  <% end %>
+  <div id="cellphone-number-errors" class="form-error-message">
+    <%= @lead.errors.full_messages_for(:cellphone_number).first %>
+  </div>
 
 <% end %>

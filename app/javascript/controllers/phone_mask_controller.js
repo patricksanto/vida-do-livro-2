@@ -6,13 +6,27 @@ import Inputmask from "inputmask";
 // Connects to data-controller="phone-mask"
 export default class extends Controller {
   connect() {
-    console.log('phonemaskcontroller')
     // Get the input element
     const input = this.element;
 
-    // Apply the input mask
-    const inputMask = new Inputmask("(99)9999-99999");
+    // Apply the input mask with custom options
+    const inputMask = new Inputmask({
+      mask: "(99)9999-99999",
+      removeMaskOnSubmit: true,
+      showMaskOnHover: false,
+    });
     inputMask.mask(input);
-    // Inputmask({ mask: '(99) 99999-9999' }).mask(this.element);
+
+    // Attach an event listener to handle user input
+    input.addEventListener("input", () => {
+      this.handleInputError(input);
+    });
+    // Handle errors
+    // const errorContainer = document.querySelector("#cellphone-number-errors");
+    // if (errorContainer) {
+    //   const hasError = input.classList.contains("fields-with-errors");
+    //   const isInvalid = input.value.replace(/\D/g, "").length < 11; // Remove non-digits and check if length is less than 11
+    //   errorContainer.innerHTML = hasError ? input.dataset.error : isInvalid ? "Telefone inválido" : "";
+    // }
   }
 }
