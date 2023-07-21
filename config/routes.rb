@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root to: "pages#main"
 
-  get 'leads/new'
-  get 'leads/create'
+  resources :leads, only: [:new, :create]
+  # get 'leads/new'
+  # get 'leads/create'
 
   devise_for :users
   get '/ofuturodolivro_masterclass', to: 'pages#home'
