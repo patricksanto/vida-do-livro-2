@@ -2,8 +2,8 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :workshop, :submit, :main]
 
   def home
-    @page_title = 'O Futuro do Livro'
-    @page_description = 'Masterclass com John B. Thompson | Vida do Livro'
+    @page_title = 'O Futuro do Livro - Masterclass com John B. Thompson | Vida do Livro'
+    # @page_description = 'Masterclass com John B. Thompson | Vida do Livro'
     @page_keywords = 'Vida do livro, mercado editorial, livros digitais, Daniel Lameira'
   end
 
@@ -17,7 +17,7 @@ class PagesController < ApplicationController
 
   def main
     @lead = Lead.new
-    @page_title = 'VVida do Livro - O curso para entender o mercado editorial'
+    @page_title = ' O curso para entender o mercado editorial'
     @page_description = 'Uma jornada para leitores, profissionais e curiosos'
     @page_keywords = 'Vida do livro, mercado editorial, livros digitais, Daniel Lameira'
   end
