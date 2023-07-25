@@ -11,7 +11,7 @@ export default class extends Controller {
 
     // Apply the input mask with custom options
     const inputMask = new Inputmask({
-      mask: "(99)9999-99999",
+      mask: "(99) 99999-9999",
       removeMaskOnSubmit: true,
       showMaskOnHover: false,
     });
